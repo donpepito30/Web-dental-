@@ -17,7 +17,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     title: "Nuestras Instalaciones Médicas en Durán",
     description: "Ambientes diseñados para tu máximo confort y tranquilidad, cumpliendo con los más exigentes estándares de bioseguridad de ACESS.",
     category: "Instalaciones",
-    badge: "Clínica Premium"
+    badge: "Clínica Especializada"
   },
   {
     id: "img-2",
@@ -87,7 +87,7 @@ export default function ClinicGallery() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-[#0B5ED7] uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-[#21C58E] animate-pulse" />
-            <span>Galería Clínica Premium</span>
+            <span>Galería Clínica Especializada</span>
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-4xl text-[#263238]">
             Compromiso con tu Salud, Confort e Innovación

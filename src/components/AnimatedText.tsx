@@ -67,7 +67,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
             key={i}
             variants={wordVariants}
             className={`inline-block mr-[0.25em] pb-1 ${
-              isHighlighted ? highlightClass : ""
+              isHighlighted ? `${highlightClass} italic` : ""
             }`}
           >
             {word}

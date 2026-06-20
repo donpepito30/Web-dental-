@@ -28,7 +28,13 @@ import {
   BookOpen,
   Award,
   AlertCircle,
-  HelpCircle
+  HelpCircle,
+  Mail,
+  ArrowUp,
+  Facebook,
+  Instagram,
+  Globe,
+  Home
 } from "lucide-react";
 import {
   SERVICES_DATA,
@@ -484,8 +490,8 @@ export default function App() {
                     <Heart className="w-6 h-6 fill-white" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-sm">Tu bienestar es nuestra misión</h3>
-                    <p className="font-sans text-xs text-gray-600">Servicios médicos profesionales y seguros todo el año en Durán.</p>
+                    <h3 className="font-heading font-bold text-sm">Tu <span className="italic text-[#0B5ED7]">bienestar</span> es nuestra <span className="italic text-[#21C58E]">misión</span></h3>
+                    <p className="font-sans text-xs text-gray-600">Servicios <span className="italic text-[#0B5ED7] font-medium">médicos profesionales</span> y seguros todo el año en Durán.</p>
                   </div>
                 </div>
 
@@ -507,36 +513,36 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             
-            <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all">
+             <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all">
               <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#21C58E]" id="stat-patients">
                 <AnimatedNumber value="+8,500" />
               </p>
-              <p className="text-sm text-gray-300 font-semibold">Pacientes Satisfechos</p>
-              <p className="text-xs text-gray-400">Atendidos en Durán</p>
+              <p className="text-sm text-gray-300 font-semibold italic">Pacientes Satisfechos</p>
+              <p className="text-xs text-gray-400 italic">Atendidos en Durán</p>
             </div>
 
             <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all border-t sm:border-t-0 sm:border-l border-white/10">
               <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#0B5ED7] inline-flex items-center gap-1">
                 <AnimatedNumber value="12" /> <span className="text-lg text-white font-normal">años</span>
               </p>
-              <p className="text-sm text-gray-300 font-semibold">Experiencia Médica Clinica</p>
-              <p className="text-xs text-gray-400">Trayectoria impecable</p>
+              <p className="text-sm text-gray-300 font-semibold italic">Experiencia Médica Clinica</p>
+              <p className="text-xs text-gray-400 italic">Trayectoria impecable</p>
             </div>
 
             <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all border-t lg:border-t-0 lg:border-l border-white/10">
               <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#21C58E]">
                 <AnimatedNumber value="99.4%" />
               </p>
-              <p className="text-sm text-gray-300 font-semibold">Nivel de Satisfacción</p>
-              <p className="text-xs text-gray-400">Evaluado en encuestas de salida</p>
+              <p className="text-sm text-gray-300 font-semibold italic">Nivel de Satisfacción</p>
+              <p className="text-xs text-gray-400 italic">Evaluado en encuestas de salida</p>
             </div>
 
             <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all border-t lg:border-t-0 lg:border-l border-white/10">
               <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#0B5ED7]" id="stat-doctors">
                 <AnimatedNumber value="100%" />
               </p>
-              <p className="text-sm text-gray-300 font-semibold">Bioseguridad & Normas</p>
-              <p className="text-xs text-gray-400">Acreditados por ACESS</p>
+              <p className="text-sm text-gray-300 font-semibold italic">Bioseguridad & Normas</p>
+              <p className="text-xs text-gray-400 italic">Acreditados por ACESS</p>
             </div>
 
           </div>
@@ -574,7 +580,7 @@ export default function App() {
           <div className="space-y-6 max-w-5xl mx-auto" id="collapsible-services-container">
             
             {/* 1. ODONTOLOGÍA COLLAPSIBLE PANEL */}
-            <div className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
               <button
                 onClick={() => setOpenCategories(prev => ({ ...prev, odontologia: !prev.odontologia }))}
                 type="button"
@@ -630,7 +636,7 @@ export default function App() {
                         <div
                           key={service.id}
                           id={`service-${service.id}`}
-                          className="group relative bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col justify-between"
+                          className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
                         >
                           {/* Service header */}
                           <div className="flex items-center justify-between mb-4">
@@ -681,7 +687,7 @@ export default function App() {
             </div>
 
             {/* 2. MEDICINA GENERAL Y ESPECIALIDADES COLLAPSIBLE PANEL */}
-            <div className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
               <button
                 onClick={() => setOpenCategories(prev => ({ ...prev, medicina: !prev.medicina }))}
                 type="button"
@@ -737,7 +743,7 @@ export default function App() {
                         <div
                           key={service.id}
                           id={`service-${service.id}`}
-                          className="group relative bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col justify-between"
+                          className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
                         >
                           {/* Service header */}
                           <div className="flex items-center justify-between mb-4">
@@ -910,8 +916,8 @@ export default function App() {
               </div>
               <h2 className="font-heading font-black text-3xl sm:text-4xl text-[#263238] leading-tight">
                 <AnimatedText 
-                  text="Estándares Premium para el cuidado de tu familia"
-                  highlightWords={["Premium", "familia"]}
+                  text="Estándares de Excelencia para el cuidado de tu familia"
+                  highlightWords={["Excelencia", "familia"]}
                   highlightClass="text-[#0B5ED7]"
                   delay={0.1}
                 />
@@ -936,7 +942,7 @@ export default function App() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <span className="absolute bottom-4 left-4 text-white text-[10px] font-extrabold bg-[#0B5ED7] backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/20">
-                  Recepción & Oficinas Premium
+                  Recepción & Oficinas Modernas
                 </span>
               </div>
 
@@ -957,7 +963,7 @@ export default function App() {
               {BENEFITS_DATA.map((benefit) => (
                 <div
                   key={benefit.id}
-                  className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-50 hover:border-blue-100 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between hover:-translate-y-1 group"
+                  className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/60 shadow-md hover:shadow-2xl flex flex-col justify-between hover:-translate-y-1 group transition-all duration-300 hover:border-blue-200/50"
                 >
                   <div className="space-y-4">
                     <span className="inline-block text-[10px] font-extrabold text-[#0B5ED7] bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
@@ -1015,7 +1021,7 @@ export default function App() {
           <div className="space-y-6 max-w-5xl mx-auto" id="collapsible-promos-container">
             
             {/* 1. ODONTOLOGÍA PROMOS PANEL */}
-            <div className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
               <button
                 onClick={() => setOpenPromoCategories(prev => ({ ...prev, odontologia: !prev.odontologia }))}
                 type="button"
@@ -1038,7 +1044,7 @@ export default function App() {
                       </span>
                     </div>
                     <p className="font-sans text-xs sm:text-sm text-gray-500 max-w-xl">
-                      Ahorra en tratamientos estéticos, limpiezas de sarro por ultrasonido y blanqueamientos dentales premium sin dolor.
+                      Ahorra en tratamientos estéticos, limpiezas de sarro por ultrasonido y blanqueamientos dentales especializados sin dolor.
                     </p>
                   </div>
                 </div>
@@ -1137,7 +1143,7 @@ export default function App() {
             </div>
 
             {/* 2. MEDICINA GENERAL Y ESPECIALIDADES PROMOS PANEL */}
-            <div className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
               <button
                 onClick={() => setOpenPromoCategories(prev => ({ ...prev, medicina: !prev.medicina }))}
                 type="button"
@@ -1294,7 +1300,7 @@ export default function App() {
           {/* Testimonial Active Slider Slider Card wrapper */}
           <div className="max-w-2xl mx-auto relative group">
             
-            <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-slate-100/80 shadow-2xl transition-all duration-300">
               
               {/* Stars layout estimation */}
               <div className="flex gap-1 mb-6 text-amber-400 justify-center">
@@ -1374,8 +1380,8 @@ export default function App() {
             </div>
             <h2 className="font-heading font-black text-3xl text-[#263238] leading-tight">
               <AnimatedText 
-                text="Tu Ruta de Atención Premium en 4 Sencillos Pasos"
-                highlightWords={["Atención", "Premium", "Pasos"]}
+                text="Tu Ruta de Atención Integral en 4 Sencillos Pasos"
+                highlightWords={["Atención", "Integral", "Pasos"]}
                 highlightClass="text-[#0B5ED7]"
                 delay={0.1}
               />
@@ -1398,9 +1404,11 @@ export default function App() {
                 <span>01</span>
               </div>
               <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">Reserva en Línea o WhatsApp</h3>
+                <h3 className="font-heading font-bold text-base text-[#263238]">
+                  <span className="italic">Reserva</span> en Línea o WhatsApp
+                </h3>
                 <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Elige tu horario y especialidad dental o ginecológica en el formulario abajo. Solo toma un minuto.
+                  Elige tu horario y especialidad dental o ginecológica en el formulario abajo. Solo toma <span className="italic font-semibold text-[#0B5ED7]">un minuto</span>.
                 </p>
               </div>
             </div>
@@ -1411,9 +1419,11 @@ export default function App() {
                 <span>02</span>
               </div>
               <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">Confirmación Directa</h3>
+                <h3 className="font-heading font-bold text-base text-[#263238]">
+                  <span className="italic text-[#21C58E]">Confirmación</span> Directa
+                </h3>
                 <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Recibimos tus datos y en un plazo de 30 minutos confirmamos la disponibilidad de tu doctor de cabecera.
+                  Recibimos tus datos y en un plazo de <span className="italic font-semibold text-[#21C58E]">30 minutos</span> confirmamos la disponibilidad de tu doctor de cabecera.
                 </p>
               </div>
             </div>
@@ -1424,9 +1434,11 @@ export default function App() {
                 <span>03</span>
               </div>
               <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">Asistencia Médica Premium</h3>
+                <h3 className="font-heading font-bold text-base text-[#263238]">
+                  Asistencia Médica <span className="italic">Especializada</span>
+                </h3>
                 <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Acude al consultorio seguro Shyris Park. Recibe diagnóstico digital HD y atención amigable del especialista.
+                  Acude al consultorio seguro. Recibe diagnóstico <span className="italic text-[#0B5ED7]">digital HD</span> y atención amigable del especialista.
                 </p>
               </div>
             </div>
@@ -1437,9 +1449,11 @@ export default function App() {
                 <span>04</span>
               </div>
               <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">Seguimiento Post-Consulta</h3>
+                <h3 className="font-heading font-bold text-base text-[#263238]">
+                  <span className="italic">Seguimiento</span> Post-Consulta
+                </h3>
                 <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Estamos pendientes de ti. Mantente en comunicación directa por chat para futuras revisiones con total cuidado.
+                  Estamos pendientes de ti. Mantente en comunicación directa por <span className="italic text-[#21C58E]">chat virtual</span> para futuras revisiones con total cuidado.
                 </p>
               </div>
             </div>
@@ -1456,12 +1470,12 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
             {/* Left Column: Form & Header Banner (8 columns) */}
-            <div className="lg:col-span-8 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col justify-between">
+            <div className="lg:col-span-8 bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-100 flex flex-col justify-between">
               
               {/* Form Header Banner */}
               <div className="bg-gradient-to-r from-[#263238] to-[#1E272C] py-8 px-6 sm:px-10 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-center sm:text-left space-y-1">
-                  <h2 className="font-heading font-extrabold text-2xl">Módulo de Reserva Premium</h2>
+                  <h2 className="font-heading font-extrabold text-2xl">Módulo de Reserva Personalizada</h2>
                   <p className="font-sans text-xs text-gray-300">Agenda tu consulta de valoración en pocos clics. Disponibilidad garantizada.</p>
                 </div>
                 
@@ -1727,7 +1741,7 @@ export default function App() {
             <div className="lg:col-span-4 flex flex-col gap-6">
               
               {/* Photo 1 Card: State of the art workspace */}
-              <div className="bg-white rounded-3xl p-5 border border-gray-100 shadow-sm flex flex-col gap-4 group hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-md flex flex-col gap-4 group hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-50 shadow-inner">
                   <img
                     src="https://i.ibb.co/6JZWGqb3/Save-Clip-App-727799021-18379686019165922-1213207141689684578-n.jpg"
@@ -1752,7 +1766,7 @@ export default function App() {
               </div>
 
               {/* Photo 2 Card: Advanced Technology */}
-              <div className="bg-white rounded-3xl p-5 border border-gray-100 shadow-sm flex flex-col gap-4 group hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-md flex flex-col gap-4 group hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-50 shadow-inner">
                   <img
                     src="https://i.ibb.co/Fqk8MKDq/Save-Clip-App-658171838-1705697040653889-7004509995493784262-n.jpg"
@@ -1827,7 +1841,7 @@ export default function App() {
           <div className="space-y-6 max-w-5xl mx-auto" id="collapsible-blog-container">
 
             {/* 1. SECCIÓN DENTAL EN BLOG */}
-            <div className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:border-blue-100 transition-all bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
               <button
                 onClick={() => setOpenBlogCategories(prev => ({ ...prev, odontologia: !prev.odontologia }))}
                 type="button"
@@ -1930,7 +1944,7 @@ export default function App() {
             </div>
 
             {/* 2. SECCIÓN MEDICINA EN BLOG */}
-            <div className="border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:border-blue-200 transition-all bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
               <button
                 onClick={() => setOpenBlogCategories(prev => ({ ...prev, medicina: !prev.medicina }))}
                 type="button"
@@ -2495,88 +2509,178 @@ export default function App() {
 
       </div>
 
-      {/* 🔮 FOOTER & LEGAL COPYRIGHT */}
-      <footer className="bg-gradient-to-r from-[#263238] to-[#1E272C] text-white pt-16 pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 🔮 GROUNDED FOOTER & TRUST CENTER */}
+      <footer id="grounded-footer" className="relative bg-[#1A2327] border-t border-slate-800/80 text-slate-200 pt-10 pb-6 overflow-hidden">
+        {/* Subtle background decorative shapes */}
+        <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10" id="footer-blocks">
+          {/* Main 2-Column Grounded Structured Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-8 border-b border-slate-800/80" id="footer-blocks">
             
-            {/* Block 1: Bio */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <div className="w-9 h-9 rounded-lg overflow-hidden border border-white/10 bg-white">
+            {/* Column 1: Brand Directory & Core Trust Seals (7 cols) */}
+            <div className="lg:col-span-7 space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl overflow-hidden border border-slate-700 bg-white p-0.5 shadow-md">
                   <img 
                     src="https://i.ibb.co/wN2zzSsw/FB-IMG-1781954245363.jpg" 
                     alt="Logo Imedent" 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover rounded-lg" 
                   />
                 </div>
-                <span className="font-heading font-extrabold text-[#21C58E]">
-                  Imedent <span className="text-white">Centro Médico</span>
-                </span>
+                <div className="flex flex-col">
+                  <span className="font-heading font-black text-xs text-[#21C58E] uppercase tracking-wider leading-none">
+                    Imedent Centro Médico
+                  </span>
+                  <span className="font-sans font-medium text-[9px] text-gray-500 tracking-widest uppercase">
+                    Salud Familiar • Durán
+                  </span>
+                </div>
               </div>
-              <p className="font-sans text-xs text-gray-300 leading-relaxed">
-                Consulta de medicina familiar y centro médico de servicios ambulatorios en Durán, Ecuador. Tu bienestar familiar y dental en las mejores manos profesionales.
+              
+              <p className="font-sans text-xs text-gray-400 leading-relaxed max-w-xl">
+                Clínica médico-dental especializada en <span className="italic text-white">Durán, Guayas</span>. Ofrecemos cuidado de la <span className="italic text-white font-medium">salud de alta calidad</span> mediante tecnología diagnóstica avanzada, odontología de alta gama y ginecología profesional con <span className="italic text-[#21C58E]">calidez</span>.
               </p>
-              <div className="flex gap-2">
-                <span className="text-[10px] font-bold bg-white/10 px-3 py-1 rounded">ACESS Reg.</span>
-                <span className="text-[10px] font-bold bg-white/10 px-3 py-1 rounded">Durán, EC</span>
+
+              {/* Technical badges and Social Channels in one row for maximum compactness */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex gap-2">
+                  <span className="inline-flex items-center gap-1 text-[9px] font-mono bg-slate-800/40 text-slate-300 border border-slate-700/40 px-2 py-0.5 rounded-md">
+                    <ShieldCheck className="w-2.5 h-2.5 text-[#21C58E]" />
+                    Registro ACESS
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-[9px] font-mono bg-slate-800/40 text-slate-300 border border-slate-700/40 px-2 py-0.5 rounded-md">
+                    <Award className="w-2.5 h-2.5 text-[#0B5ED7]" />
+                    Aprobado MSP
+                  </span>
+                </div>
+                
+                <span className="h-4 w-px bg-slate-800" />
+
+                <div className="flex gap-2">
+                  <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-7 h-7 rounded-md bg-slate-800/80 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm text-gray-400"
+                    title="Imedent en Facebook"
+                  >
+                    <Facebook className="w-3.5 h-3.5" />
+                  </a>
+                  <a 
+                    href="https://instagram.com/imedent_ec" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-7 h-7 rounded-md bg-slate-800/80 hover:bg-pink-600 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm text-gray-400"
+                    title="Imedent en Instagram"
+                  >
+                    <Instagram className="w-3.5 h-3.5" />
+                  </a>
+                  <a 
+                    href="#reserva" 
+                    className="w-7 h-7 rounded-md bg-slate-800/80 hover:bg-[#21C58E] hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm text-gray-400"
+                    title="Asistencia Virtual"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Block 2: Quick Links */}
-            <div className="space-y-4">
-              <h4 className="font-heading font-extrabold text-sm uppercase tracking-wider text-[#21C58E]">Servicios</h4>
-              <ul className="space-y-2 text-xs text-gray-300">
-                <li><a href="#servicios" className="hover:text-white transition-colors">Medicina General / Familiar</a></li>
-                <li><a href="#servicios" className="hover:text-white transition-colors">Ecografías Especializadas</a></li>
-                <li><a href="#servicios" className="hover:text-white transition-colors">Exámenes de Laboratorio</a></li>
-                <li><a href="#servicios" className="hover:text-white transition-colors">Cardiología Clinica</a></li>
-                <li><a href="#servicios" className="hover:text-white transition-colors">Odontología General</a></li>
-              </ul>
-            </div>
+            {/* Column 2: Geolocalized Coordinates & Direct Hub (5 cols) */}
+            <div className="lg:col-span-5 space-y-4">
+              <h4 className="font-heading font-extrabold text-[11px] uppercase tracking-wider text-slate-400 border-l border-[#21C58E] pl-2">
+                Datos de Contacto
+              </h4>
+              
+              <div className="space-y-3 text-xs font-sans text-gray-400">
+                {/* Physical address with external directions map action */}
+                <div className="flex gap-2 items-start bg-slate-800/20 p-2.5 rounded-xl border border-slate-800/50">
+                  <MapPin className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                  <div className="space-y-0.5 shrink">
+                    <p className="text-[#F5F7FA] font-bold text-xs">Imedent Durán</p>
+                    <p className="text-[11px] leading-relaxed">Av. Abel Gilbert 231 y calle Sibambe, Durán, Guayas, Ecuador.</p>
+                    <a 
+                      href="https://maps.google.com/?q=Imedent+Dur%C3%A1n+Abel+Gilbert"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[10px] text-[#0B5ED7] hover:underline font-bold mt-1"
+                    >
+                      <span>Ver en Google Maps</span>
+                      <ArrowRight className="w-2.5 h-2.5" />
+                    </a>
+                  </div>
+                </div>
 
-            {/* Block 3: Help Links */}
-            <div className="space-y-4">
-              <h4 className="font-heading font-extrabold text-sm uppercase tracking-wider text-[#0B5ED7]">Soporte</h4>
-              <ul className="space-y-2 text-xs text-gray-300">
-                <li><a href="#preguntas" className="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
-                <li><a href="#proceso" className="hover:text-white transition-colors">Proceso de Atención</a></li>
-                <li><a href="#beneficios" className="hover:text-white transition-colors">Beneficios Clínicos</a></li>
-                <li><a href="https://instagram.com/imedent_ec" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sugerencias & Instagram</a></li>
-                <li><a href="/sitemap.xml" className="hover:text-[#21C58E] transition-colors font-bold">Ver Sitemap.xml</a></li>
-              </ul>
-            </div>
+                {/* Dial action lines with badges */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="flex items-center justify-between bg-slate-800/10 hover:bg-slate-800/20 px-3 py-2 rounded-xl border border-slate-800/40 transition-colors">
+                    <a href="tel:+593968609865" className="flex items-center gap-1.5 text-[#21C58E] hover:underline font-bold text-[11px]">
+                      <Phone className="w-3 h-3" />
+                      <span>+593 96 860 9865</span>
+                    </a>
+                  </div>
+                  
+                  <div className="flex items-center justify-between bg-slate-800/10 hover:bg-slate-800/20 px-3 py-2 rounded-xl border border-slate-800/40 transition-colors">
+                    <a href="tel:+593969370655" className="flex items-center gap-1.5 text-white hover:underline font-bold text-[11px]">
+                      <Phone className="w-3 h-3 text-blue-400" />
+                      <span>+593 96 937 0655</span>
+                    </a>
+                  </div>
+                </div>
 
-            {/* Block 4: Contact quick details */}
-            <div className="space-y-4">
-              <h4 className="font-heading font-extrabold text-sm uppercase tracking-wider text-white">Canales</h4>
-              <p className="text-xs text-gray-300">
-                Av. Abel Gilbert 231 y calle Sibambe, Durán, Guayas, Ecuador. 092408
-              </p>
-              <p className="text-xs text-[#21C58E] font-bold">
-                WhatsApp: +593 96 860 9865
-              </p>
-              <p className="text-xs text-[#0B5ED7] font-bold">
-                Teléfono: +593 96 937 0655
-              </p>
-              <p className="text-xs text-gray-400">
-                Correo: imedentsa@gmail.com
-              </p>
+                {/* Mail link */}
+                <div className="flex items-center justify-between pt-1 text-[11px]">
+                  <a 
+                    href="mailto:imedentsa@gmail.com" 
+                    className="flex items-center gap-1.5 hover:text-white transition-colors"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-blue-400" />
+                    <span>imedentsa@gmail.com</span>
+                  </a>
+                  <span className="text-[9px] font-mono text-gray-500">Respuesta en menos de 24h</span>
+                </div>
+              </div>
             </div>
 
           </div>
 
-          {/* Legal bottom row */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
-            <p className="text-[11px] text-gray-400 font-sans">
-              &copy; {new Date().getFullYear()} Imedent Centro Médico. Todos los derechos reservados. Diseñado bajo estándares de accesibilidad WCAG y optimizado para Google SEO en Ecuador.
-            </p>
-            <div className="flex gap-4 text-[10px] text-gray-400">
-              <a href="#reserva" className="hover:underline">Políticas de Privacidad de Datos</a>
-              <span className="text-gray-600">|</span>
-              <a href="#contacto" className="hover:underline">Términos de Cita</a>
+          {/* Pre-Copyright Sub-Grid & Dynamic Back to Top Trigger */}
+          <div className="pt-4 pb-3 flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-slate-800/20">
+            <div className="flex items-center gap-1.5 text-xs text-gray-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[11px]">Servicio en línea 100% verificado y conectado</span>
+            </div>
+            
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="group inline-flex items-center gap-1.5 text-[11px] text-gray-400 hover:text-white font-bold bg-slate-800/60 hover:bg-slate-800 px-3.5 py-1.5 rounded-lg transition-all border border-slate-700/30 hover:border-slate-600/50 cursor-pointer"
+              title="Volver al inicio"
+            >
+              <span>Subir al Inicio</span>
+              <ArrowUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+          </div>
+
+          {/* Legal Compliance & Copyright Bottom Row */}
+          <div className="pt-4 flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
+            <div className="space-y-0.5">
+              <p className="text-[10px] text-gray-500 font-sans leading-normal">
+                &copy; {new Date().getFullYear()} Imedent Centro Médico. Todos los derechos reservados. No garantizamos diagnósticos finales a través de consultas virtuales; toda sugerencia del asistente virtual debe ser validada presencialmente por un médico titulado.
+              </p>
+              <p className="text-[9px] text-gray-600 font-mono">
+                ACESS Reg. No. SL-2024-092-A • Durán, Guayas, República del Ecuador.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 text-[9px] text-gray-500 shrink-0">
+              <a href="#reserva" className="hover:text-white hover:underline transition-colors">Protección de Datos</a>
+              <span className="text-slate-800">|</span>
+              <a href="#contacto" className="hover:text-white hover:underline transition-colors">Términos de Cita</a>
+              <span className="text-slate-800">|</span>
+              <a href="#servicios" className="hover:text-white hover:underline transition-colors">Catálogo Completo</a>
             </div>
           </div>
 
