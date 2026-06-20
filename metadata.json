@@ -1,0 +1,6 @@
+{
+  "name": "Imedent Centro Médico - Medicina y Odontología en Durán",
+  "description": "Centro médico de atención familiar y odontología en Durán, Guayas. Medicina general, laboratorios, ecografías especializadas, cardiología y odontología general con chatbot inteligente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
