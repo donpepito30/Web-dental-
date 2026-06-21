@@ -410,14 +410,14 @@ export default function App() {
               {/* Trust Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#00A9FF]/20 border border-[#00A9FF]/30 rounded-full text-xs font-semibold text-white uppercase tracking-wider shadow-sm mx-auto lg:mx-0 backdrop-blur-sm">
                 <CheckCircle2 className="w-4 h-4 text-[#7DDAE8]" />
-                <span>Salud de Alta Calidad en Durán</span>
+                <span>Centro Médico y Odontológico Integral</span>
               </div>
 
               {/* Title */}
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white leading-tight tracking-tight">
                 <AnimatedText 
-                  text="La clínica de confianza para tu Salud Familiar y Dental"
-                  highlightWords={["Salud", "Familiar", "Dental"]}
+                  text="Tu salud y bienestar en las mejores manos"
+                  highlightWords={["salud", "bienestar"]}
                   highlightClass="text-[#00A9FF]"
                   delay={0.15}
                 />
@@ -425,12 +425,7 @@ export default function App() {
 
               {/* Tagline */}
               <p className="font-sans text-white/95 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                <AnimatedText 
-                  text="En Inmedentec Centro Médico integramos medicina general, ecografías avanzadas, análisis de laboratorio, cardiología y odontología general en un mismo centro ambulatorio especializado en Durán."
-                  highlightWords={["Inmedentec", "Centro", "Médico"]}
-                  highlightClass="text-[#7DDAE8] font-bold"
-                  delay={0.3}
-                />
+                Consultas médicas, odontología, ecografías y laboratorio clínico en Durán.
               </p>
 
               {/* Call To Action Buttons */}
@@ -441,7 +436,7 @@ export default function App() {
                   id="hero-cta-booking"
                 >
                   <Calendar className="w-5 h-5 text-[#7DDAE8]" />
-                  <span>Agenda tu cita ahora</span>
+                  <span>Reservar cita</span>
                 </a>
 
                 <a
@@ -452,72 +447,14 @@ export default function App() {
                   id="hero-cta-whatsapp"
                 >
                   <Phone className="w-5 h-5 text-[#00A9FF]" />
-                  <span>Consultar por WhatsApp</span>
+                  <span>WhatsApp</span>
                 </a>
-              </div>
-
-              {/* Secondary Confidence Features */}
-              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/25 text-white font-sans max-w-xl mx-auto lg:mx-0">
-                <div className="text-center lg:text-left">
-                  <p className="text-xs text-white/70 font-semibold uppercase">Ubicación</p>
-                  <p className="text-sm font-bold mt-0.5 text-white">Durán, Ecuador</p>
-                </div>
-                <div className="text-center lg:text-left border-x border-white/25 px-2">
-                  <p className="text-xs text-white/70 font-semibold uppercase">Atención Familiar</p>
-                  <p className="text-sm font-bold mt-0.5 text-[#7DDAE8]">100% Personalizada</p>
-                </div>
-                <div className="text-center lg:text-left">
-                  <p className="text-xs text-white/70 font-semibold">Acreditación</p>
-                  <p className="text-sm font-bold mt-0.5 text-white">ACESS Reg.</p>
-                </div>
               </div>
 
             </motion.div>
 
             {/* Empty space in grid column on desktop to let full background image shine visibly on right */}
             <div className="hidden lg:block lg:col-span-4" />
-
-          </div>
-        </div>
-      </section>
-
-      {/* 📊 2. CLINICAL STATS SECTION */}
-      <section className="bg-gradient-to-r from-[#263238] to-[#1E272C] py-8 sm:py-12 text-white relative overflow-hidden" id="estadisticas">
-        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,#21C58E_1px,transparent_1px),linear-gradient(-45deg,#0B5ED7_1px,transparent_1px)] bg-[size:20px_20px]" />
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-4 gap-1 sm:gap-4 md:gap-8 text-center items-center">
-            
-             <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all">
-              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#21C58E]" id="stat-patients">
-                <AnimatedNumber value="+8,500" />
-              </p>
-              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Pacientes Satisfechos</p>
-              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Atendidos en Durán</p>
-            </div>
-
-            <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all border-l border-white/10">
-              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#0B5ED7] inline-flex items-center gap-0.5 sm:gap-1">
-                <AnimatedNumber value="12" /> <span className="text-[10px] sm:text-lg text-white font-normal">años</span>
-              </p>
-              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Experiencia Médica</p>
-              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Trayectoria clínica</p>
-            </div>
-
-            <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all border-l border-white/10">
-              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#21C58E]">
-                <AnimatedNumber value="99.4%" />
-              </p>
-              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Nivel Satisfacción</p>
-              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Encuestas de salida</p>
-            </div>
-
-            <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all border-l border-white/10">
-              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#0B5ED7]" id="stat-doctors">
-                <AnimatedNumber value="100%" />
-              </p>
-              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Bioseguridad</p>
-              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Acreditada ACESS</p>
-            </div>
 
           </div>
         </div>
@@ -554,7 +491,7 @@ export default function App() {
           <div className="space-y-6 max-w-5xl mx-auto" id="collapsible-services-container">
             
             {/* 1. ODONTOLOGÍA COLLAPSIBLE PANEL */}
-            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md bg-white">
               <button
                 onClick={() => setOpenCategories(prev => ({ ...prev, odontologia: !prev.odontologia }))}
                 type="button"
@@ -564,7 +501,7 @@ export default function App() {
                 aria-controls="panel-odontologia-content"
               >
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#21C58E] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#21C58E] flex items-center justify-center shrink-0 shadow-sm transition-transform">
                     <Stethoscope className="w-8 h-8" />
                   </div>
                   <div className="space-y-1 text-center sm:text-left">
@@ -611,7 +548,7 @@ export default function App() {
                           <div
                             key={service.id}
                             id={`service-${service.id}`}
-                            className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
+                            className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
                           >
                             {/* Service header */}
                             <div className="flex items-center justify-between mb-4">
@@ -687,7 +624,7 @@ export default function App() {
             </div>
 
             {/* 2. MEDICINA GENERAL Y ESPECIALIDADES COLLAPSIBLE PANEL */}
-            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md bg-white">
               <button
                 onClick={() => setOpenCategories(prev => ({ ...prev, medicina: !prev.medicina }))}
                 type="button"
@@ -697,7 +634,7 @@ export default function App() {
                 aria-controls="panel-medicina-content"
               >
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#0B5ED7] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#0B5ED7] flex items-center justify-center shrink-0 shadow-sm transition-transform">
                     <Heart className="w-8 h-8 text-[#0B5ED7]" />
                   </div>
                   <div className="space-y-1 text-center sm:text-left">
@@ -744,7 +681,7 @@ export default function App() {
                           <div
                             key={service.id}
                             id={`service-${service.id}`}
-                            className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
+                            className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
                           >
                             {/* Service header */}
                             <div className="flex items-center justify-between mb-4">
@@ -909,7 +846,7 @@ export default function App() {
                     }}
                     className="flex-1 text-center py-3.5 bg-[#0B5ED7] hover:bg-blue-700 text-white font-bold text-xs rounded-xl uppercase tracking-widest shadow-md transition-colors"
                   >
-                    Agendar Esta Opción
+                    Reservar cita
                   </a>
                   
                   <a
@@ -930,13 +867,13 @@ export default function App() {
       </AnimatePresence>
 
       {/* 🌟 4. DIFFERENTIAL BENEFITS BENTO GRID */}
-      <section id="beneficios" className="py-20 bg-gradient-to-b from-[#F5F7FA] to-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="beneficios" className="py-16 bg-gradient-to-b from-[#F5F7FA] to-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Introductory Text Grid */}
-            <div className="lg:col-span-5 space-y-6">
+            <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-[#0B5ED7] uppercase tracking-wider">
                 <span>¿Por qué Inmedentec?</span>
               </div>
@@ -956,14 +893,16 @@ export default function App() {
                   delay={0.25}
                 />
               </p>
+            </div>
 
-              {/* Real Reception / Facilities Photo Showcase - NO CROPPING */}
-              <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 rounded-3xl border border-blue-100/60 p-4 sm:p-5 shadow-md flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-xl transition-all duration-300">
-                <div className="w-[35%] sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+            {/* Real Reception / Facilities Photo Showcase - NO CROPPING */}
+            <div className="lg:col-span-12 xl:col-span-5 lg:order-last">
+              <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 rounded-3xl border border-blue-100/60 p-4 sm:p-5 shadow-sm flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-md transition-all duration-300">
+                <div className="w-[30%] shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
                   <img
                     src="https://i.ibb.co/4w4tgWY6/Save-Clip-App-712524031-18377334682165922-2555696126096709958-n.jpg"
                     alt="Recepción de Inmedentec"
-                    className="w-full h-auto object-contain max-h-[120px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-auto object-contain max-h-[100px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                     referrerPolicy="no-referrer"
                     loading="lazy"
                   />
@@ -972,52 +911,47 @@ export default function App() {
                   <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2.5 py-1 rounded-full">
                     BIENVENIDA CÁLIDA
                   </span>
-                  <h4 className="font-heading font-black text-sm text-[#263238] mt-1">Sala de Espera y Admisión Higienizada</h4>
-                  <p className="font-sans text-xs text-gray-500 mt-1 leading-relaxed">
-                    Nuestra central de atención al cliente en Durán te brinda un ingreso cómodo, ágil y totalmente ordenado, con personal administrativo listo para resolver tus inquietudes clínicas.
+                  <h4 className="font-heading font-black text-xs text-[#263238] mt-1">Sala de Espera y Admisión Higienizada</h4>
+                  <p className="font-sans text-[11px] text-gray-500 mt-1 leading-relaxed">
+                    Nuestra central de atención al cliente en Durán te brinda un ingreso cómodo, ágil y totalmente ordenado.
                   </p>
-                </div>
-              </div>
-
-              {/* Confidence certification badge */}
-              <div className="bg-white p-5 rounded-2xl border border-gray-100 flex items-center gap-4 shadow-sm">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-[#21C58E]">
-                  <Award className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="font-bold text-sm text-[#263238]">Consultorio Acreditado ACESS</p>
-                  <p className="text-xs text-gray-500">Garantizamos rigurosos controles de esterilización y bioseguridad.</p>
                 </div>
               </div>
             </div>
 
-            {/* Bento Grid layout with detailed benefits */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6" id="bento-differential">
+          </div>
+
+          {/* ACESS Badge & 4 Compact Benefits in a SINGLE row */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center pt-8 border-t border-gray-100">
+            {/* ACESS Badge */}
+            <div className="lg:col-span-4 bg-white p-4 rounded-2xl border border-emerald-100/80 flex items-center gap-4 shadow-sm">
+              <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-[#21C58E] shrink-0">
+                <Award className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="font-bold text-sm text-[#263238]">Consultorio Acreditado ACESS</p>
+                <p className="text-xs text-gray-400">Controles rigurosos de esterilización y bioseguridad.</p>
+              </div>
+            </div>
+
+            {/* 4 Compact Benefits Row */}
+            <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4" id="bento-differential">
               {BENEFITS_DATA.map((benefit) => (
                 <div
                   key={benefit.id}
-                  className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/60 shadow-md hover:shadow-2xl flex flex-col justify-between hover:-translate-y-1 group transition-all duration-300 hover:border-blue-200/50"
+                  className="bg-white p-4 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-blue-200/80 transition-all duration-300 flex items-center gap-3 group"
                 >
-                  <div className="space-y-4">
-                    <span className="inline-block text-[10px] font-extrabold text-[#0B5ED7] bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                      {benefit.highlightText}
-                    </span>
-                    <h3 className="font-heading font-bold text-base text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
-                      {benefit.title}
-                    </h3>
-                    <p className="font-sans text-sm text-gray-500 leading-relaxed">
-                      {benefit.description}
-                    </p>
+                  <div className="p-2 bg-blue-50/60 rounded-xl text-[#00A9FF] group-hover:bg-blue-100/80 transition-colors shrink-0">
+                    {getBenefitIcon(benefit.iconName)}
                   </div>
-                  <div className="mt-6 flex justify-end">
-                    <div className="p-2 bg-[#F5F7FA] rounded-xl group-hover:bg-blue-50 transition-colors">
-                      {getBenefitIcon(benefit.iconName)}
-                    </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs text-[#263238] leading-tight group-hover:text-[#00A9FF] transition-colors">
+                      {benefit.title}
+                    </h4>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
 
         </div>
@@ -1054,7 +988,7 @@ export default function App() {
           <div className="space-y-6 max-w-5xl mx-auto" id="collapsible-promos-container">
             
             {/* 1. ODONTOLOGÍA PROMOS PANEL */}
-            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md bg-white">
               <button
                 onClick={() => setOpenPromoCategories(prev => ({ ...prev, odontologia: !prev.odontologia }))}
                 type="button"
@@ -1064,7 +998,7 @@ export default function App() {
                 aria-controls="panel-promo-odontologia-content"
               >
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#21C58E] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#21C58E] flex items-center justify-center shrink-0 shadow-sm transition-transform">
                     <Sparkles className="w-8 h-8" />
                   </div>
                   <div className="space-y-1 text-center sm:text-left">
@@ -1165,7 +1099,7 @@ export default function App() {
                           }}
                           className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#0B5ED7] hover:bg-[#0D6EFD] text-white font-bold text-xs rounded-xl uppercase tracking-widest shadow transition-colors"
                         >
-                          <span>Reservar Esta Promoción</span>
+                          <span>Reservar cita</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </a>
                       </div>
@@ -1176,7 +1110,7 @@ export default function App() {
             </div>
 
             {/* 2. MEDICINA GENERAL Y ESPECIALIDADES PROMOS PANEL */}
-            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
+            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md bg-white">
               <button
                 onClick={() => setOpenPromoCategories(prev => ({ ...prev, medicina: !prev.medicina }))}
                 type="button"
@@ -1186,7 +1120,7 @@ export default function App() {
                 aria-controls="panel-promo-medicina-content"
               >
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#0B5ED7] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#0B5ED7] flex items-center justify-center shrink-0 shadow-sm transition-transform">
                     <Heart className="w-8 h-8 text-[#0B5ED7]" />
                   </div>
                   <div className="space-y-1 text-center sm:text-left">
@@ -1287,7 +1221,7 @@ export default function App() {
                           }}
                           className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#0B5ED7] hover:bg-[#0D6EFD] text-white font-bold text-xs rounded-xl uppercase tracking-widest shadow transition-colors"
                         >
-                          <span>Reservar Esta Promoción</span>
+                          <span>Reservar cita</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </a>
                       </div>
@@ -1403,98 +1337,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* 🔢 7. ATTENTION PROCESS IN 4 EASY STEPS */}
-      <section className="py-20 bg-gradient-to-b from-white via-blue-50/10 to-[#F8FAFC]" id="proceso">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-xs font-bold text-[#21C58E] uppercase tracking-wider">
-              <span>¿Cómo funciona?</span>
-            </div>
-            <h2 className="font-heading font-black text-3xl text-[#263238] leading-tight">
-              <AnimatedText 
-                text="Tu Ruta de Atención Integral en 4 Sencillos Pasos"
-                highlightWords={["Atención", "Integral", "Pasos"]}
-                highlightClass="text-[#0B5ED7]"
-                delay={0.1}
-              />
-            </h2>
-            <p className="font-sans text-gray-500 max-w-xl mx-auto">
-              <AnimatedText 
-                text="Facilitamos tu consulta médica desde el primer contacto virtual hasta tu recuperación integral."
-                highlightWords={["contacto", "recuperación"]}
-                highlightClass="text-[#21C58E] font-medium"
-                delay={0.25}
-              />
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative" id="steps-row">
-            
-            {/* Step 1 */}
-            <div className="relative text-center space-y-4 group">
-              <div className="w-16 h-16 bg-blue-50 text-[#0B5ED7] rounded-2xl flex items-center justify-center font-heading font-black text-xl mx-auto shadow shadow-inner border border-blue-100 group-hover:scale-105 transition-transform">
-                <span>01</span>
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">
-                  <span className="italic">Reserva</span> en Línea o WhatsApp
-                </h3>
-                <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Elige tu horario y especialidad dental o ginecológica en el formulario abajo. Solo toma <span className="italic font-semibold text-[#0B5ED7]">un minuto</span>.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative text-center space-y-4 group">
-              <div className="w-16 h-16 bg-emerald-50 text-[#21C58E] rounded-2xl flex items-center justify-center font-heading font-black text-xl mx-auto shadow shadow-inner border border-emerald-100 group-hover:scale-105 transition-transform">
-                <span>02</span>
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">
-                  <span className="italic text-[#21C58E]">Confirmación</span> Directa
-                </h3>
-                <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Recibimos tus datos y en un plazo de <span className="italic font-semibold text-[#21C58E]">30 minutos</span> confirmamos la disponibilidad de tu doctor de cabecera.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="relative text-center space-y-4 group">
-              <div className="w-16 h-16 bg-blue-50 text-[#0B5ED7] rounded-2xl flex items-center justify-center font-heading font-black text-xl mx-auto shadow shadow-inner border border-blue-100 group-hover:scale-105 transition-transform">
-                <span>03</span>
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">
-                  Asistencia Médica <span className="italic">Especializada</span>
-                </h3>
-                <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Acude al consultorio seguro. Recibe diagnóstico <span className="italic text-[#0B5ED7]">digital HD</span> y atención amigable del especialista.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="relative text-center space-y-4 group">
-              <div className="w-16 h-16 bg-emerald-50 text-[#21C58E] rounded-2xl flex items-center justify-center font-heading font-black text-xl mx-auto shadow shadow-inner border border-emerald-100 group-hover:scale-105 transition-transform">
-                <span>04</span>
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-base text-[#263238]">
-                  <span className="italic">Seguimiento</span> Post-Consulta
-                </h3>
-                <p className="font-sans text-xs text-gray-400 mt-2 leading-relaxed">
-                  Estamos pendientes de ti. Mantente en comunicación directa por <span className="italic text-[#21C58E]">chat virtual</span> para futuras revisiones con total cuidado.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
 
       {/* 📝 8. BOOKING FORM SECTION & REAL-TIME INTERACTION */}
       <section id="reserva" className="py-20 bg-[#F5F7FA] relative">
@@ -1759,7 +1601,7 @@ export default function App() {
                     ) : (
                       <>
                         <Calendar className="w-5 h-5" />
-                        <span>Agendar Cita en Tiempo Real</span>
+                        <span>Reservar cita</span>
                       </>
                     )}
                   </button>
@@ -1822,342 +1664,6 @@ export default function App() {
 
         </div>
       </section>
-
-      {/* 📚 9. BLOG PREPARED FOR SEO */}
-      <section id="blog" className="py-20 bg-gradient-to-b from-[#F2F7FB] via-white to-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-[#0B5ED7] uppercase tracking-wider">
-                <span>Educación en Salud</span>
-              </div>
-              <h2 className="font-heading font-black text-3xl text-[#263238] leading-tight">
-                <AnimatedText 
-                  text="Artículos Recientes de Nuestro Blog de Bienestar"
-                  highlightWords={["Blog", "Bienestar"]}
-                  highlightClass="text-[#0B5ED7]"
-                  delay={0.1}
-                />
-              </h2>
-              <p className="font-sans text-gray-500 max-w-xl">
-                <AnimatedText 
-                  text="Aprende de la mano de nuestros especialistas sobre el cuidado de tu salud oral y visitas preventivas ginecológicas."
-                  highlightWords={["especialistas", "salud"]}
-                  highlightClass="text-[#21C58E] font-medium"
-                  delay={0.25}
-                />
-              </p>
-            </div>
-
-            {/* Interactive Local Blog Search Bar */}
-            <div className="relative w-full max-w-xs self-start md:self-end">
-              <input
-                type="text"
-                placeholder="Buscar artículos..."
-                value={blogSearch}
-                onChange={(e) => setBlogSearch(e.target.value)}
-                className="w-full bg-[#F5F7FA] border border-gray-200 rounded-xl pl-10 pr-4 py-2 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0B5ED7]"
-              />
-              <Search className="absolute left-3 top-2.5 w-4.5 h-4.5 text-gray-400" />
-            </div>
-          </div>
-
-          {/* Interactive Collapsible Blog Categories */}
-          <div className="space-y-6 max-w-5xl mx-auto" id="collapsible-blog-container">
-
-            {/* 1. SECCIÓN DENTAL EN BLOG */}
-            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
-              <button
-                onClick={() => setOpenBlogCategories(prev => ({ ...prev, odontologia: !prev.odontologia }))}
-                type="button"
-                className="w-full flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-white to-slate-50/20 hover:to-slate-50 text-left transition-all cursor-pointer group"
-                id="btn-toggle-blog-dental"
-                aria-expanded={openBlogCategories.odontologia}
-                aria-controls="panel-blog-dental"
-              >
-                <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-                  <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0B5ED7] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                    <BookOpen className="w-7 h-7" />
-                  </div>
-                  <div className="space-y-1">
-                    <div className="flex flex-col sm:flex-row items-center gap-2">
-                      <h3 className="font-heading font-extrabold text-lg sm:text-xl text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
-                        Artículos de Salud Dental & Estética
-                      </h3>
-                      <span className="text-[9px] uppercase tracking-wider font-extrabold px-2.5 py-0.5 bg-blue-50 text-[#0B5ED7] border border-blue-100 rounded-full">
-                        {filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-3").length === 0 ? "Sin Resultados" : `${filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-3").length} Artículos`}
-                      </span>
-                    </div>
-                    <p className="font-sans text-xs text-gray-400">
-                      Mitos sobre blanqueamientos dentales de consultorio, higiene para niños y cuidados preventivos diarios.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 md:mt-0 flex items-center gap-3">
-                  <span className="hidden sm:inline-block text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-[#0B5ED7] transition-colors">
-                    {openBlogCategories.odontologia ? "Cerrar" : "Ampliar Categoría"}
-                  </span>
-                  <div className={`p-2 rounded-full bg-gray-50 border border-gray-100 text-gray-400 group-hover:text-[#0B5ED7] group-hover:border-blue-100 transition-all ${
-                    openBlogCategories.odontologia ? "rotate-180 bg-blue-50 text-[#0B5ED7]" : ""
-                  }`}>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300" />
-                  </div>
-                </div>
-              </button>
-
-              {/* Dental articles list layout */}
-              <div
-                id="panel-blog-dental"
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  openBlogCategories.odontologia ? "max-h-[2200px] border-t border-gray-100 p-6 bg-slate-50/30" : "max-h-0"
-                }`}
-              >
-                {filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-3").length === 0 ? (
-                  <p className="text-center font-sans text-sm text-gray-400 py-6">No hay artículos dentales que coincidan con la búsqueda.</p>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    {filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-3").map((post) => (
-                      <article
-                        key={post.id}
-                        className="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-                      >
-                        {/* Image header with lazy loading */}
-                        <div className="aspect-[16/10] overflow-hidden bg-gray-100 relative">
-                          <img
-                            src={post.image}
-                            alt={post.title}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                          <span className="absolute top-4 left-4 bg-white/90 backdrop-blur px-2.5 py-1 rounded-full text-[10px] font-bold text-[#263238]">
-                            {post.category}
-                          </span>
-                        </div>
-
-                        {/* Content info wrapper */}
-                        <div className="p-6 space-y-4">
-                          <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold">
-                            <span>{post.date}</span>
-                            <span className="w-1 h-1 bg-gray-300 rounded-full" />
-                            <span>{post.readTime}</span>
-                          </div>
-
-                          <h4 className="font-heading font-bold text-base text-[#263238] leading-snug group-hover:text-[#0B5ED7] transition-colors line-clamp-2">
-                            {post.title}
-                          </h4>
-
-                          <p className="font-sans text-xs text-gray-500 line-clamp-3 leading-relaxed">
-                            {post.excerpt}
-                          </p>
-                        </div>
-
-                        <div className="p-6 pt-0 mt-auto">
-                          <button
-                            onClick={() => setSelectedBlogPost(post)}
-                            className="w-full inline-flex items-center justify-center gap-2 py-3 bg-blue-50 hover:bg-[#0B5ED7] text-[#0B5ED7] group-hover:text-white font-bold text-xs rounded-xl uppercase tracking-wider transition-colors cursor-pointer"
-                          >
-                            <span>Seguir Leyendo</span>
-                            <BookOpen className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* 2. SECCIÓN MEDICINA EN BLOG */}
-            <div className="border border-gray-200/60 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300 bg-white">
-              <button
-                onClick={() => setOpenBlogCategories(prev => ({ ...prev, medicina: !prev.medicina }))}
-                type="button"
-                className="w-full flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-white to-slate-50/20 hover:to-slate-50 text-left transition-all cursor-pointer group"
-                id="btn-toggle-blog-medicina"
-                aria-expanded={openBlogCategories.medicina}
-                aria-controls="panel-blog-medicina"
-              >
-                <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-                  <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0B5ED7] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                    <Heart className="w-7 h-7 text-[#0B5ED7]" />
-                  </div>
-                  <div className="space-y-1">
-                    <div className="flex flex-col sm:flex-row items-center gap-2">
-                      <h3 className="font-heading font-extrabold text-lg sm:text-xl text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
-                        Artículos de Medicina Familiar & Diagnósticos
-                      </h3>
-                      <span className="text-[9px] uppercase tracking-wider font-extrabold px-2.5 py-0.5 bg-blue-50 text-[#0B5ED7] border border-blue-100 rounded-full">
-                        {filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-2").length === 0 ? "Sin Resultados" : `${filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-2").length} Artículos`}
-                      </span>
-                    </div>
-                    <p className="font-sans text-xs text-gray-400">
-                      Importancia de los electrocardiogramas, prevención de hipertensión y ecografías en el diagnóstico familiar oportuno.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 md:mt-0 flex items-center gap-3">
-                  <span className="hidden sm:inline-block text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-pink-500 transition-colors">
-                    {openBlogCategories.medicina ? "Cerrar" : "Ampliar Categoría"}
-                  </span>
-                  <div className={`p-2 rounded-full bg-gray-50 border border-gray-100 text-gray-400 group-hover:text-[#0B5ED7] group-hover:border-blue-100 transition-all ${
-                    openBlogCategories.medicina ? "rotate-180 bg-blue-50 text-[#0B5ED7]" : ""
-                  }`}>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300" />
-                  </div>
-                </div>
-              </button>
-
-              {/* Medicine articles list layout */}
-              <div
-                id="panel-blog-medicina"
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  openBlogCategories.medicina ? "max-h-[1400px] border-t border-gray-100 p-6 bg-slate-50/10" : "max-h-0"
-                }`}
-              >
-                {filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-2").length === 0 ? (
-                  <p className="text-center font-sans text-sm text-gray-400 py-6">No hay artículos médicos que coincidan con la búsqueda.</p>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                    {filteredBlogPosts.filter(p => p.id === "post-1" || p.id === "post-2").map((post) => (
-                      <article
-                        key={post.id}
-                        className="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group w-full"
-                      >
-                        {/* Image header with lazy loading */}
-                        <div className="aspect-[16/10] overflow-hidden bg-gray-100 relative">
-                          <img
-                            src={post.image}
-                            alt={post.title}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                          <span className="absolute top-4 left-4 bg-white/90 backdrop-blur px-2.5 py-1 rounded-full text-[10px] font-bold text-[#263238]">
-                            {post.category}
-                          </span>
-                        </div>
-
-                        {/* Content info wrapper */}
-                        <div className="p-6 space-y-4">
-                          <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold">
-                            <span>{post.date}</span>
-                            <span className="w-1 h-1 bg-gray-300 rounded-full" />
-                            <span>{post.readTime}</span>
-                          </div>
-
-                          <h4 className="font-heading font-bold text-base text-[#263238] leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
-                            {post.title}
-                          </h4>
-
-                          <p className="font-sans text-xs text-gray-500 line-clamp-3 leading-relaxed">
-                            {post.excerpt}
-                          </p>
-                        </div>
-
-                        <div className="p-6 pt-0 mt-auto">
-                          <button
-                            onClick={() => setSelectedBlogPost(post)}
-                            className="w-full inline-flex items-center justify-center gap-2 py-3 bg-blue-50 hover:bg-[#0B5ED7] text-blue-600 hover:text-white font-bold text-xs rounded-xl uppercase tracking-wider transition-colors cursor-pointer"
-                          >
-                            <span>Seguir Leyendo</span>
-                            <BookOpen className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* 📖 BLOG DETAILED DIALOG MODAL (COMPLY WITH ACCESSIBILITY) */}
-      <AnimatePresence>
-        {selectedBlogPost && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-          >
-            <motion.div
-              initial={{ scale: 0.93, y: 15, opacity: 0 }}
-              animate={{ scale: 1, y: 0, opacity: 1 }}
-              exit={{ scale: 0.93, y: 15, opacity: 0 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
-              className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 shadow-2xl relative"
-              role="dialog"
-              aria-modal="true"
-            >
-              <button
-                onClick={() => setSelectedBlogPost(null)}
-                className="absolute top-4 right-4 p-2.5 text-gray-400 hover:text-[#263238] bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
-                aria-label="Cerrar artículo"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="space-y-6">
-                <span className="inline-block text-xs font-bold text-[#0B5ED7] bg-blue-50 px-3 py-1 rounded-full uppercase tracking-widest mt-2">
-                  {selectedBlogPost.category}
-                </span>
-
-                <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#263238] leading-tight">
-                  {selectedBlogPost.title}
-                </h3>
-
-                <div className="flex items-center gap-3 text-xs text-gray-400 font-semibold border-b border-gray-100 pb-4">
-                  <span>Por Dr. Especialista Inmedentec</span>
-                  <span className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
-                  <span>{selectedBlogPost.date}</span>
-                  <span className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
-                  <span>{selectedBlogPost.readTime}</span>
-                </div>
-
-                {/* Cover Image in Modal */}
-                <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-gray-100">
-                  <img
-                    src={selectedBlogPost.image}
-                    alt={selectedBlogPost.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Main Content Body */}
-                <div className="font-sans text-[#263238] text-sm leading-relaxed space-y-4">
-                  <p className="font-medium text-gray-700 bg-gray-50 border-l-4 border-[#21C58E] p-4 rounded-r-xl">
-                    {selectedBlogPost.excerpt}
-                  </p>
-                  <p>{selectedBlogPost.content}</p>
-                  <p>Nuestra clínica fomenta el autocuidado y citas preventivas de control sistemáticas. Te aconsejamos escribirnos a WhatsApp ante cualquier inquietud o para agendar una evaluación profunda.</p>
-                </div>
-
-                {/* Footer interactive linkers */}
-                <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="text-xs text-gray-400">¿Inquietudes? Agenda una consulta de valoración.</p>
-                  <div className="flex gap-2 w-full sm:w-auto">
-                    <a
-                      href="#reserva"
-                      onClick={() => setSelectedBlogPost(null)}
-                      className="flex-1 sm:flex-none text-center bg-[#0B5ED7] hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-widest py-3 px-6 rounded-xl"
-                    >
-                      Agendar valoración
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* ❓ 10. FAQ SECTION WITH INTERACTIVE COLLAPSIBLE ACCODRIONS */}
       <section id="preguntas" className="py-20 bg-[#F5F7FA]">

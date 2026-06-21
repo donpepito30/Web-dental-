@@ -85,7 +85,7 @@ export default function Header() {
               className="flex items-center gap-2 text-xs font-bold text-white bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 hover:shadow-lg hover:shadow-indigo-900/10 active:scale-95 transition-all px-6 py-2.5 rounded-full shadow-md"
             >
               <Calendar className="w-3.5 h-3.5 text-[#7DDAE8]" />
-              <span>Reservar Cita</span>
+              <span>Reservar cita</span>
             </a>
           </div>
 
@@ -134,7 +134,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2 w-full text-sm font-bold text-white bg-[#00A9FF] hover:bg-[#00a2f5] py-3 rounded-full shadow-md"
             >
               <Phone className="w-4 h-4" />
-              <span>Preguntar por WhatsApp</span>
+              <span>WhatsApp</span>
             </a>
             <a
               href="#reserva"
@@ -142,7 +142,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2 w-full text-sm font-bold text-white bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 py-3 rounded-full shadow-md"
             >
               <Calendar className="w-4 h-4 text-[#7DDAE8]" />
-              <span>Reservar Cita en Línea</span>
+              <span>Reservar cita</span>
             </a>
           </div>
         </div>

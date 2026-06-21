@@ -4,7 +4,7 @@ export interface Service {
   specialty: "odontologia" | "medicina";
   description: string;
   iconName: string; // matches lucide icon name
-  longerDetails: string;
+  longerDetails?: string;
   prepInfo?: string;
   duration: string;
   priceEstimate?: string;
