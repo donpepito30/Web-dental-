@@ -13,7 +13,7 @@ interface GalleryImage {
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "img-1",
-    url: "https://i.ibb.co/nqz46238/Save-Clip-App-670408691-18371017180165922-5133365789952151054-n.jpg",
+    url: "https://i.ibb.co/xKJwXvm8/Save-Clip-App-670408691-18371017180165922-5133365789952151054-n.jpg",
     title: "Nuestras Instalaciones Médicas en Durán",
     description: "Ambientes diseñados para tu máximo confort y tranquilidad, cumpliendo con los más exigentes estándares de bioseguridad de ACESS.",
     category: "Instalaciones",
@@ -21,7 +21,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
   },
   {
     id: "img-2",
-    url: "https://i.ibb.co/Fqk8MKDq/Save-Clip-App-658171838-1705697040653889-7004509995493784262-n.jpg",
+    url: "https://i.ibb.co/93myLNr3/Save-Clip-App-658171838-1705697040653889-7004509995493784262-n.jpg",
     title: "Odontología Estética de Vanguardia",
     description: "Equipamiento de última generación para sonrisas espectaculares. Tratamientos personalizados sin dolor guiados por especialistas.",
     category: "Procedimientos",
@@ -37,7 +37,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
   },
   {
     id: "img-4",
-    url: "https://i.ibb.co/6JZWGqb3/Save-Clip-App-727799021-18379686019165922-1213207141689684578-n.jpg",
+    url: "https://i.ibb.co/prPLNkZt/Save-Clip-App-727799021-18379686019165922-1213207141689684578-n.jpg",
     title: "Casos de Éxito de Pacientes Imedent",
     description: "La satisfacción reflejada en resultados clínicamente perfectos. Devolviendo salud y bienestar dental a las familias.",
     category: "Éxito",
@@ -76,7 +76,7 @@ export default function ClinicGallery() {
   };
 
   return (
-    <section id="galeria" className="py-20 bg-gradient-to-b from-white to-[#F5F7FA] relative overflow-hidden">
+    <section id="instalaciones" className="py-20 bg-gradient-to-b from-white to-[#F5F7FA] relative overflow-hidden">
       {/* Decorative background visual elements */}
       <div className="absolute top-[30%] right-[-10%] w-72 h-72 bg-blue-400/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-80 h-80 bg-[#21C58E]/5 rounded-full blur-3xl pointer-events-none" />
@@ -98,73 +98,86 @@ export default function ClinicGallery() {
           </p>
         </div>
 
-        {/* Dynamic Responsive 4-Column Modern Bento Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="gallery-bento-grid">
-          {GALLERY_IMAGES.map((img, index) => (
-            <div
-              key={img.id}
-              id={`gallery-card-${img.id}`}
-              className="group relative bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-1.5"
-              onMouseEnter={() => setHoveredId(img.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              {/* Image box wrapper */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 cursor-pointer" onClick={() => openLightbox(index)}>
-                <img
-                  src={img.url}
-                  alt={img.title}
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 text-white">
-                  {/* Category top badge */}
-                  <span className="self-start text-[9px] font-extrabold uppercase tracking-widest bg-white/25 backdrop-blur-md px-2.5 py-1 rounded-full text-white">
-                    {img.category}
-                  </span>
-
-                  {/* Maximize prompt */}
-                  <div className="self-end flex items-center gap-1.5 text-xs font-bold bg-white/90 text-[#263238] rounded-xl px-3 py-2 shadow-lg hover:scale-105 transition-transform duration-200">
-                    <Maximize2 className="w-3.5 h-3.5 text-[#0B5ED7]" />
-                    <span>Expandir</span>
-                  </div>
+        {/* 🎥 Video Tour Virtual de la Clínica */}
+        <div className="mb-16 bg-gradient-to-br from-[#EBF5FF] via-white to-[#F0FDF4] rounded-3xl border border-blue-100/60 p-6 sm:p-10 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" id="video-tour-container">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left Column: Premium Mock Smartphone Vertical Presentation (9:16) */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-[295px] sm:max-w-[320px] aspect-[9/16] rounded-[2.5rem] p-3 shadow-2xl bg-slate-900 border-8 border-slate-800/95 group/video transition-transform hover:scale-[1.03] duration-300 flex items-center justify-center">
+                {/* Smartphone Speaker/Camera notch mockup accent */}
+                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-slate-900 rounded-full z-15 flex items-center justify-center">
+                  <div className="w-8 h-1 bg-gray-700 rounded-full animate-pulse" />
                 </div>
+                
+                {/* Simulated Glass/Glow reflection */}
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none z-10" />
 
-                {/* Static indicator badge */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-2.5 py-1 rounded-full text-[10px] font-extrabold text-[#263238] shadow border border-gray-100 group-hover:opacity-0 transition-opacity">
-                  {img.badge}
-                </div>
-              </div>
-
-              {/* Text caption content below image */}
-              <div className="p-5 flex-1 flex flex-col justify-between">
-                <div className="space-y-2">
-                  <h3 className="font-heading font-bold text-sm text-[#263238] group-hover:text-[#0B5ED7] transition-colors leading-snug">
-                    {img.title}
-                  </h3>
-                  <p className="font-sans text-xs text-gray-500 leading-relaxed">
-                    {img.description}
-                  </p>
-                </div>
-
-                {/* Mini utility indicator */}
-                <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between text-[10px] text-gray-400 font-semibold uppercase tracking-wider">
-                  <span className="flex items-center gap-1">
-                    {img.category === "Instalaciones" && <ShieldCheck className="w-3 h-3 text-[#21C58E]" />}
-                    {img.category === "Procedimientos" && <Stethoscope className="w-3 h-3 text-[#0B5ED7]" />}
-                    {img.category === "Tecnología" && <Sparkles className="w-3 h-3 text-amber-500" />}
-                    {img.category === "Éxito" && <Heart className="w-3 h-3 text-pink-500" />}
-                    {img.category}
-                  </span>
-                  <span className="text-[#0B5ED7] group-hover:underline cursor-pointer" onClick={() => openLightbox(index)}>
-                    Ver foto
-                  </span>
+                {/* Actual Video Iframe */}
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-slate-950">
+                  <iframe 
+                    src="https://streamable.com/e/soy56m" 
+                    frameBorder="0" 
+                    scrolling="no" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ position: 'absolute', top: 0, left: 0 }} 
+                    allowFullScreen
+                    title="Tour Virtual de la Clínica en Durán"
+                    className="rounded-[2rem]"
+                  ></iframe>
                 </div>
               </div>
             </div>
-          ))}
+            
+            {/* Right Column: High-fidelity informative columns and feature bullets */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="space-y-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#00A9FF]/10 rounded-full text-[10px] font-bold text-[#00A9FF] uppercase tracking-wider">
+                  <span className="w-2 h-2 rounded-full bg-[#00A9FF] animate-ping" />
+                  <span>Reel Tour en 9:16</span>
+                </span>
+                <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#263238] tracking-tight leading-snug">
+                  Conoce Inmedentec Médico - Odontológico en Acción
+                </h3>
+                <p className="font-sans text-gray-500 text-sm leading-relaxed">
+                  Te invitamos a ver nuestro recorrido guiado por las especialidades de nuestra clínica en Durán. Comprueba en tiempo real el alto estándar de desinfección, la comodidad de la sala y nuestro instrumental tecnológico avanzado en formato vertical de reels.
+                </p>
+              </div>
+
+              {/* Polished custom dynamic bullets mapping back to the video */}
+              <div className="space-y-4">
+                <div id="video-benefit-1" className="flex gap-3 items-start group/b hover:translate-x-1 transition-transform duration-200">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#00A9FF] flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover/b:bg-[#00A9FF] group-hover/b:text-white transition-all duration-200">
+                    <ShieldCheck className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs text-[#263238] uppercase tracking-wider">Certificación Sanitaria</h4>
+                    <p className="font-sans text-xs text-gray-400 mt-0.5">Bioseguridad integral certificada para la máxima seguridad de tu familia.</p>
+                  </div>
+                </div>
+
+                <div id="video-benefit-2" className="flex gap-3 items-start group/b hover:translate-x-1 transition-transform duration-200">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#00A9FF] flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover/b:bg-[#00A9FF] group-hover/b:text-white transition-all duration-200">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs text-[#263238] uppercase tracking-wider">Equipos Odontológicos 3D</h4>
+                    <p className="font-sans text-xs text-gray-400 mt-0.5">Diagnósticos mediante imágenes digitales inmediatas y sin molestia para el paciente.</p>
+                  </div>
+                </div>
+
+                <div id="video-benefit-3" className="flex gap-3 items-start group/b hover:translate-x-1 transition-transform duration-200">
+                  <div className="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover/b:bg-rose-500 group-hover/b:text-white transition-all duration-200">
+                    <Heart className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs text-[#263238] uppercase tracking-wider">Compromiso Cero Dolor</h4>
+                    <p className="font-sans text-xs text-gray-400 mt-0.5">Tratamientos odontológicos confortables con técnicas anestésicas modernas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Feature Highlights Grid */}

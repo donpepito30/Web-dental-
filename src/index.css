@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Poppins", sans-serif;
-  --color-clinic-blue: #0B5ED7;
-  --color-clinic-green: #21C58E;
-  --color-clinic-dark: #263238;
-  --color-clinic-light: #F5F7FA;
+  --font-sans: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Manrope", sans-serif;
+  --color-clinic-blue: #00A9FF;
+  --color-clinic-green: #7DDAE8;
+  --color-clinic-dark: #1E2A5E;
+  --color-clinic-light: #F7F9FB;
+}
+
+.mesh-gradient {
+  background-color: #f7f9fb;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(203, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(188, 74%, 91%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(227, 51%, 95%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(203, 100%, 93%, 1) 0px, transparent 50%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 @keyframes float-slow {

@@ -137,7 +137,7 @@ export default function App() {
     {
       id: "welcome-1",
       role: "model",
-      text: "¡Hola! Bienvenido a Imedent Centro Médico. 🩺🦷 Soy tu asistente inteligente personal. ¿En qué puedo orientarte hoy? Ofrecemos Medicina General/Familiar, Ecografías, Laboratorio, Cardiología y Odontología general en Durán. Si deseas agendar, puedes preguntarme o usar nuestro formulario rápido.",
+      text: "¡Hola! Bienvenido a Inmedentec Centro Médico. 🩺🦷 Soy tu asistente inteligente personal. ¿En qué puedo orientarte hoy? Ofrecemos Medicina General/Familiar, Ecografías, Laboratorio, Cardiología y Odontología general en Durán. Si deseas agendar, puedes preguntarme o usar nuestro formulario rápido.",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
     }
   ]);
@@ -276,7 +276,7 @@ export default function App() {
           {
             id: `bot-lead-phone-${Date.now()}`,
             role: "model",
-            text: `¡Qué gusto conocerte, ${userMsgText}! Ahora cuéntame, ¿a qué número telefónico de WhatsApp te puede contactar un especialista de Imedent?`,
+            text: `¡Qué gusto conocerte, ${userMsgText}! Ahora cuéntame, ¿a qué número telefónico de WhatsApp te puede contactar un especialista de Inmedentec?`,
             timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
           }
         ]);
@@ -295,7 +295,7 @@ export default function App() {
           {
             id: `bot-lead-thanks-${Date.now()}`,
             role: "model",
-            text: `Perfecto, he registrado tus datos de contacto.\n\n👤 **Nombre:** ${capturedLead.name || "Paciente"}\n📞 **Teléfono:** ${userMsgText}\n\nUn asesor de Imedent te escribirá directamente pronto para formalizar tus dudas de salud. Mientras tanto, puedes usar con total libertad el formulario de citas abajo para agendar tu fecha preferida al instante.`,
+            text: `Perfecto, he registrado tus datos de contacto.\n\n👤 **Nombre:** ${capturedLead.name || "Paciente"}\n📞 **Teléfono:** ${userMsgText}\n\nUn asesor de Inmedentec te escribirá directamente pronto para formalizar tus dudas de salud. Mientras tanto, puedes usar con total libertad el formulario de citas abajo para agendar tu fecha preferida al instante.`,
             timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
           }
         ]);
@@ -349,7 +349,7 @@ export default function App() {
     } catch (err) {
       console.error(err);
       // Fallback
-      let fallbackResponse = "Entiendo perfectamente tu inquietud. En Imedent Centro Médico estamos comprometidos con tu salud integral de medicina familiar y odontología en Durán. Te aconsejamos reservar tu cita de valoración en nuestro formulario abajo para una atención inmediata, o hacernos cualquier otra pregunta.";
+      let fallbackResponse = "Entiendo perfectamente tu inquietud. En Inmedentec Centro Médico estamos comprometidos con tu salud integral de medicina familiar y odontología en Durán. Te aconsejamos reservar tu cita de valoración en nuestro formulario abajo para una atención inmediata, o hacernos cualquier otra pregunta.";
       
       if (wantsContact && !capturedLead.completed) {
         fallbackResponse += " ¿Me podrías indicar tu Nombre para que un especialista humano te contacte de inmediato por WhatsApp?";
@@ -371,62 +371,64 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen text-[#263238] selection:bg-[#0B5ED7] selection:text-white" id="landing-container">
+    <div className="min-h-screen mesh-gradient text-[#1E2A5E] selection:bg-[#00A9FF]/30 selection:text-[#1E2A5E] font-sans" id="landing-container">
       {/* 🧭 NAVIGATION HEADER */}
       <Header />
 
       {/* 🚀 1. HERO SECTION */}
       <section
         id="hero"
-        className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-tr from-[#F5F7FA] via-white to-blue-50/40 overflow-hidden"
+        className="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-[85vh] flex items-center bg-transparent overflow-hidden"
       >
-        {/* Real Clinic Background Image with Transparency (Opacity 0.08) */}
-        <div className="absolute inset-0 pointer-events-none select-none opacity-[0.08] z-0">
+        {/* Real Clinic Background Image with high visibility & premium healthcare gradient mask overlay */}
+        <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/Jj2DQsjF/13-clinica-me-dica.jpg" 
-            alt="Fondo de Centro Médico Imedent" 
+            alt="Fondo de Centro Médico Inmedentec" 
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover select-none"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1E2A5E]/95 via-[#1E2A5E]/80 to-transparent" />
+          <div className="absolute inset-0 bg-[#1E2A5E]/20" />
         </div>
 
-        {/* Floating background decorative blobs */}
-        <div className="absolute top-[10%] left-[-10%] w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse-subtle pointer-events-none" />
-        <div className="absolute bottom-[20%] right-[-10%] w-96 h-96 bg-[#21C58E]/10 rounded-full blur-3xl animate-pulse-subtle pointer-events-none" />
+        {/* Floating background decorative light blobs */}
+        <div className="absolute top-[10%] left-[-10%] w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none z-10" />
+        <div className="absolute bottom-[20%] right-[-10%] w-96 h-96 bg-[#7DDAE8]/10 rounded-full blur-3xl pointer-events-none z-10" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Hero Text Information Column */}
+            {/* Hero Text Information Column: Spanning 8 columns to leave the right area beautiful and clean */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="space-y-6 md:space-y-8 text-center lg:text-left" 
+              className="lg:col-span-8 space-y-6 md:space-y-8 text-center lg:text-left" 
               id="hero-text-content"
             >
               {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-xs font-semibold text-[#0B5ED7] uppercase tracking-wider shadow-sm mx-auto lg:mx-0">
-                <CheckCircle2 className="w-4 h-4 text-[#21C58E]" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#00A9FF]/20 border border-[#00A9FF]/30 rounded-full text-xs font-semibold text-white uppercase tracking-wider shadow-sm mx-auto lg:mx-0 backdrop-blur-sm">
+                <CheckCircle2 className="w-4 h-4 text-[#7DDAE8]" />
                 <span>Salud de Alta Calidad en Durán</span>
               </div>
 
               {/* Title */}
-              <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-[#263238] leading-tight tracking-tight">
+              <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white leading-tight tracking-tight">
                 <AnimatedText 
                   text="La clínica de confianza para tu Salud Familiar y Dental"
                   highlightWords={["Salud", "Familiar", "Dental"]}
-                  highlightClass="text-[#0B5ED7]"
+                  highlightClass="text-[#00A9FF]"
                   delay={0.15}
                 />
               </h1>
 
               {/* Tagline */}
-              <p className="font-sans text-gray-600 text-base md:text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              <p className="font-sans text-white/95 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 <AnimatedText 
-                  text="En Imedent Centro Médico integramos medicina general, ecografías avanzadas, análisis de laboratorio, cardiología y odontología general en un mismo centro ambulatorio especializado en Durán."
-                  highlightWords={["Imedent", "Centro", "Médico"]}
-                  highlightClass="text-[#21C58E] font-bold"
+                  text="En Inmedentec Centro Médico integramos medicina general, ecografías avanzadas, análisis de laboratorio, cardiología y odontología general en un mismo centro ambulatorio especializado en Durán."
+                  highlightWords={["Inmedentec", "Centro", "Médico"]}
+                  highlightClass="text-[#7DDAE8] font-bold"
                   delay={0.3}
                 />
               </p>
@@ -435,73 +437,45 @@ export default function App() {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
                   href="#reserva"
-                  className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#0B5ED7] to-[#0D6EFD] hover:from-blue-700 hover:to-blue-600 text-white font-bold text-base rounded-2xl shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200"
+                  className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 bg-[#00A9FF] hover:bg-[#00A9FF]/90 text-white font-bold text-base rounded-full shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200"
                   id="hero-cta-booking"
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-5 h-5 text-[#7DDAE8]" />
                   <span>Agenda tu cita ahora</span>
                 </a>
 
                 <a
-                  href="https://wa.me/593968609865?text=Hola%20Imedent!%20Deseo%20más%20información%20sobre%20los%20servicios%20de%20medicina%20y%20odontología."
+                  href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Deseo%20más%20información%20sobre%20los%20servicios%20de%20medicina%20y%20odontología."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 bg-[#21C58E] hover:bg-[#1EAF7E] text-white font-bold text-base rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200"
+                  className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-100 text-[#1E2A5E] font-bold text-base rounded-full shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200"
                   id="hero-cta-whatsapp"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Preguntar por WhatsApp</span>
+                  <Phone className="w-5 h-5 text-[#00A9FF]" />
+                  <span>Consultar por WhatsApp</span>
                 </a>
               </div>
 
               {/* Secondary Confidence Features */}
-              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-100 text-[#263238] font-sans">
+              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/25 text-white font-sans max-w-xl mx-auto lg:mx-0">
                 <div className="text-center lg:text-left">
-                  <p className="text-xs text-gray-500 font-semibold uppercase">Ubicación</p>
-                  <p className="text-sm font-bold mt-0.5 text-[#263238]">Durán, Ecuador</p>
+                  <p className="text-xs text-white/70 font-semibold uppercase">Ubicación</p>
+                  <p className="text-sm font-bold mt-0.5 text-white">Durán, Ecuador</p>
                 </div>
-                <div className="text-center lg:text-left border-x border-gray-100 px-2">
-                  <p className="text-xs text-gray-500 font-semibold uppercase">Atención Familiar</p>
-                  <p className="text-sm font-bold mt-0.5 text-[#21C58E]">100% Personalizada</p>
+                <div className="text-center lg:text-left border-x border-white/25 px-2">
+                  <p className="text-xs text-white/70 font-semibold uppercase">Atención Familiar</p>
+                  <p className="text-sm font-bold mt-0.5 text-[#7DDAE8]">100% Personalizada</p>
                 </div>
                 <div className="text-center lg:text-left">
-                  <p className="text-xs text-gray-500 font-semibold">Acreditación</p>
-                  <p className="text-sm font-bold mt-0.5 text-[#263238]">Senescyt Reg.</p>
+                  <p className="text-xs text-white/70 font-semibold">Acreditación</p>
+                  <p className="text-sm font-bold mt-0.5 text-white">ACESS Reg.</p>
                 </div>
               </div>
 
             </motion.div>
 
-            {/* Impacting UI Vector / Custom Representation Column */}
-            <div className="relative flex justify-center animate-float" id="hero-image-column">
-              <div className="relative w-full max-w-md sm:max-w-lg aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-tr from-blue-100 via-blue-50 to-emerald-50 relative flex items-center justify-center group">
-                <img
-                  src="https://i.ibb.co/nqz46238/Save-Clip-App-670408691-18371017180165922-5133365789952151054-n.jpg"
-                  alt="Instalaciones de Imedent Centro Médico en Durán"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Floating Glassmorphism Patient Card */}
-                <div className="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-2xl flex items-center gap-4 text-[#263238] shadow-lg animate-pulse-subtle">
-                  <div className="w-12 h-12 bg-[#21C58E] rounded-full flex items-center justify-center text-white shrink-0">
-                    <Heart className="w-6 h-6 fill-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-sm">Tu <span className="italic text-[#0B5ED7]">bienestar</span> es nuestra <span className="italic text-[#21C58E]">misión</span></h3>
-                    <p className="font-sans text-xs text-gray-600">Servicios <span className="italic text-[#0B5ED7] font-medium">médicos profesionales</span> y seguros todo el año en Durán.</p>
-                  </div>
-                </div>
-
-                {/* Floating reviews rate bubble */}
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-amber-100">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span className="text-xs font-bold font-sans text-gray-800">4.9/5 Calificación</span>
-                </div>
-              </div>
-            </div>
+            {/* Empty space in grid column on desktop to let full background image shine visibly on right */}
+            <div className="hidden lg:block lg:col-span-4" />
 
           </div>
         </div>
@@ -631,55 +605,81 @@ export default function App() {
                     id="panel-odontologia-content"
                     className="overflow-hidden border-t border-gray-100 bg-slate-50/50"
                   >
-                    <div className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {SERVICES_DATA.filter((s) => s.specialty === "odontologia").map((service) => (
-                        <div
-                          key={service.id}
-                          id={`service-${service.id}`}
-                          className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
-                        >
-                          {/* Service header */}
-                          <div className="flex items-center justify-between mb-4">
-                            <div className="p-3 rounded-xl bg-slate-50 group-hover:bg-blue-50 transition-colors">
-                              {getServiceIcon(service.iconName)}
+                    <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {SERVICES_DATA.filter((s) => s.specialty === "odontologia").map((service) => (
+                          <div
+                            key={service.id}
+                            id={`service-${service.id}`}
+                            className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
+                          >
+                            {/* Service header */}
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="p-3 rounded-xl bg-slate-50 group-hover:bg-blue-50 transition-colors">
+                                {getServiceIcon(service.iconName)}
+                              </div>
+                              <span className="text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 bg-emerald-50 text-[#21C58E] border border-emerald-100 rounded-full">
+                                Odontología
+                              </span>
                             </div>
-                            <span className="text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 bg-emerald-50 text-[#21C58E] border border-emerald-100 rounded-full">
-                              Odontología
-                            </span>
-                          </div>
 
-                          {/* Content */}
-                          <div className="space-y-2">
-                            <h4 className="font-heading font-bold text-base text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
-                              {service.name}
+                            {/* Content */}
+                            <div className="space-y-2">
+                              <h4 className="font-heading font-bold text-base text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
+                                {service.name}
+                              </h4>
+                              <p className="font-sans text-xs text-gray-500 leading-relaxed line-clamp-3">
+                                {service.description}
+                              </p>
+                            </div>
+
+                            {/* Duration & Price */}
+                            <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500 font-semibold">
+                              <span className="inline-flex items-center gap-1">
+                                <Clock className="w-3.5 h-3.5 text-gray-400" />
+                                {service.duration}
+                              </span>
+                              <span className="text-gray-700">
+                                {service.priceEstimate ? "Costos detallados" : ""}
+                              </span>
+                            </div>
+
+                            <div className="mt-5">
+                              <button
+                                onClick={() => setSelectedDetailedService(service)}
+                                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-50 group-hover:bg-gradient-to-r group-hover:from-[#0B5ED7] group-hover:to-blue-600 text-gray-600 group-hover:text-white font-bold text-xs rounded-lg uppercase tracking-wider transition-all duration-300 cursor-pointer"
+                              >
+                                <span>Ver Detalles de Cuidado</span>
+                                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="lg:col-span-5">
+                        <div className="bg-white p-5 rounded-3xl border border-gray-200/60 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-xl transition-all duration-300">
+                          <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+                            <img
+                              src="https://i.ibb.co/93myLNr3/Save-Clip-App-658171838-1705697040653889-7004509995493784262-n.jpg"
+                              alt="Consultorio Odontológico de Inmedentec"
+                              className="w-full h-auto object-contain max-h-[220px] sm:max-h-[300px] rounded-xl transition-all duration-500 group-hover:scale-[1.02]"
+                              referrerPolicy="no-referrer"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2 py-0.5 rounded">
+                              ODONTOLOGÍA SIN MIEDO
+                            </span>
+                            <h4 className="font-heading font-black text-xs text-[#263238] mt-1 leading-snug">
+                              Equipos de Profilaxis y Estética Dental
                             </h4>
-                            <p className="font-sans text-xs text-gray-500 leading-relaxed line-clamp-3">
-                              {service.description}
+                            <p className="font-sans text-[11px] text-gray-500 mt-1.5 leading-relaxed">
+                              Nuestra unidad dental en Durán está equipada con ultrasonido de limpieza indolora y tecnología de foto-curado moderna. Garantizamos una esterilización completa antes y después de cada tratamiento clínico.
                             </p>
                           </div>
-
-                          {/* Duration & Price */}
-                          <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500 font-semibold">
-                            <span className="inline-flex items-center gap-1">
-                              <Clock className="w-3.5 h-3.5 text-gray-400" />
-                              {service.duration}
-                            </span>
-                            <span className="text-gray-700">
-                              {service.priceEstimate ? "Costos detallados" : ""}
-                            </span>
-                          </div>
-
-                          <div className="mt-5">
-                            <button
-                              onClick={() => setSelectedDetailedService(service)}
-                              className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-50 group-hover:bg-gradient-to-r group-hover:from-[#0B5ED7] group-hover:to-blue-600 text-gray-600 group-hover:text-white font-bold text-xs rounded-lg uppercase tracking-wider transition-all duration-300 cursor-pointer"
-                            >
-                              <span>Ver Detalles de Cuidado</span>
-                              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                            </button>
-                          </div>
                         </div>
-                      ))}
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -738,55 +738,81 @@ export default function App() {
                     id="panel-medicina-content"
                     className="overflow-hidden border-t border-gray-100 bg-slate-50/50"
                   >
-                    <div className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                      {SERVICES_DATA.filter((s) => s.specialty === "medicina").map((service) => (
-                        <div
-                          key={service.id}
-                          id={`service-${service.id}`}
-                          className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
-                        >
-                          {/* Service header */}
-                          <div className="flex items-center justify-between mb-4">
-                            <div className="p-3 rounded-xl bg-slate-50 group-hover:bg-blue-50 transition-colors">
-                              {getServiceIcon(service.iconName)}
+                    <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {SERVICES_DATA.filter((s) => s.specialty === "medicina").map((service) => (
+                          <div
+                            key={service.id}
+                            id={`service-${service.id}`}
+                            className="group relative bg-white rounded-2xl border border-gray-200/60 p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
+                          >
+                            {/* Service header */}
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="p-3 rounded-xl bg-slate-50 group-hover:bg-blue-50 transition-colors">
+                                {getServiceIcon(service.iconName)}
+                              </div>
+                              <span className="text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 bg-blue-50 text-[#0B5ED7] border border-blue-100 rounded-full">
+                                Medicina Familiar
+                              </span>
                             </div>
-                            <span className="text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 bg-blue-50 text-[#0B5ED7] border border-blue-100 rounded-full">
-                              Medicina Familiar
-                            </span>
-                          </div>
 
-                          {/* Content */}
-                          <div className="space-y-2">
-                            <h4 className="font-heading font-bold text-base text-[#263238] group-hover:text-[#06429C] transition-colors">
-                              {service.name}
+                            {/* Content */}
+                            <div className="space-y-2">
+                              <h4 className="font-heading font-bold text-base text-[#263238] group-hover:text-[#06429C] transition-colors">
+                                {service.name}
+                              </h4>
+                              <p className="font-sans text-xs text-gray-500 leading-relaxed line-clamp-3">
+                                {service.description}
+                              </p>
+                            </div>
+
+                            {/* Duration & Price */}
+                            <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500 font-semibold">
+                              <span className="inline-flex items-center gap-1">
+                                <Clock className="w-3.5 h-3.5 text-gray-400" />
+                                {service.duration}
+                              </span>
+                              <span className="text-gray-700">
+                                {service.priceEstimate ? "Costos detallados" : ""}
+                              </span>
+                            </div>
+
+                            <div className="mt-5">
+                              <button
+                                onClick={() => setSelectedDetailedService(service)}
+                                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-50 group-hover:bg-gradient-to-r group-hover:from-[#0B5ED7] group-hover:to-blue-600 text-gray-600 group-hover:text-white font-bold text-xs rounded-lg uppercase tracking-wider transition-all duration-300 cursor-pointer"
+                              >
+                                <span>Ver Detalles de Cuidado</span>
+                                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="lg:col-span-5">
+                        <div className="bg-white p-5 rounded-3xl border border-gray-200/60 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-xl transition-all duration-300">
+                          <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+                            <img
+                              src="https://i.ibb.co/prPLNkZt/Save-Clip-App-727799021-18379686019165922-1213207141689684578-n.jpg"
+                              alt="Consultorio de Ginecología y Ecografía de Inmedentec"
+                              className="w-full h-auto object-contain max-h-[220px] sm:max-h-[300px] rounded-xl transition-all duration-500 group-hover:scale-[1.02]"
+                              referrerPolicy="no-referrer"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#21C58E] bg-emerald-50 px-2 py-0.5 rounded">
+                              TECNOLOGÍA DE ECOGRAFÍA
+                            </span>
+                            <h4 className="font-heading font-black text-xs text-[#263238] mt-1 leading-snug">
+                              Ginecología & Diagnóstico de Alta Resolución
                             </h4>
-                            <p className="font-sans text-xs text-gray-500 leading-relaxed line-clamp-3">
-                              {service.description}
+                            <p className="font-sans text-[11px] text-gray-500 mt-1.5 leading-relaxed">
+                              Disponemos de ecógrafos de alta gama de excelente definición para valoraciones abdominales, pélvicas y ginecológicas inmediatas, brindando un diagnóstico preciso y confiable respaldado por médicos certificados en Durán.
                             </p>
                           </div>
-
-                          {/* Duration & Price */}
-                          <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-500 font-semibold">
-                            <span className="inline-flex items-center gap-1">
-                              <Clock className="w-3.5 h-3.5 text-gray-400" />
-                              {service.duration}
-                            </span>
-                            <span className="text-gray-700">
-                              {service.priceEstimate ? "Costos detallados" : ""}
-                            </span>
-                          </div>
-
-                          <div className="mt-5">
-                            <button
-                              onClick={() => setSelectedDetailedService(service)}
-                              className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-50 group-hover:bg-gradient-to-r group-hover:from-[#0B5ED7] group-hover:to-blue-600 text-gray-600 group-hover:text-white font-bold text-xs rounded-lg uppercase tracking-wider transition-all duration-300 cursor-pointer"
-                            >
-                              <span>Ver Detalles de Cuidado</span>
-                              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                            </button>
-                          </div>
                         </div>
-                      ))}
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -912,13 +938,13 @@ export default function App() {
             {/* Introductory Text Grid */}
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-[#0B5ED7] uppercase tracking-wider">
-                <span>¿Por qué Imedent?</span>
+                <span>¿Por qué Inmedentec?</span>
               </div>
               <h2 className="font-heading font-black text-3xl sm:text-4xl text-[#263238] leading-tight">
                 <AnimatedText 
                   text="Estándares de Excelencia para el cuidado de tu familia"
                   highlightWords={["Excelencia", "familia"]}
-                  highlightClass="text-[#0B5ED7]"
+                  highlightClass="text-[#00A9FF]"
                   delay={0.1}
                 />
               </h2>
@@ -926,24 +952,31 @@ export default function App() {
                 <AnimatedText 
                   text="Nos tomamos la salud con absoluta seriedad. No solo resolvemos molestias físicas; diseñamos una experiencia de hospitalidad médica donde el respeto, la tecnología y el confort se entrelazan."
                   highlightWords={["hospitalidad", "tecnología"]}
-                  highlightClass="text-[#21C58E] font-medium"
+                  highlightClass="text-[#7DDAE8] font-medium"
                   delay={0.25}
                 />
               </p>
 
-              {/* Real Reception / Facilities Photo Showcase */}
-              <div className="relative rounded-3xl overflow-hidden shadow-md aspect-[16/10] border border-gray-100 group">
-                <img
-                  src="https://i.ibb.co/4w4tgWY6/Save-Clip-App-712524031-18377334682165922-2555696126096709958-n.jpg"
-                  alt="Instalaciones de primer nivel Imedent en Durán"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                <span className="absolute bottom-4 left-4 text-white text-[10px] font-extrabold bg-[#0B5ED7] backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/20">
-                  Recepción & Oficinas Modernas
-                </span>
+              {/* Real Reception / Facilities Photo Showcase - NO CROPPING */}
+              <div className="bg-white rounded-3xl border border-gray-200/60 p-5 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-xl transition-all duration-300">
+                <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+                  <img
+                    src="https://i.ibb.co/4w4tgWY6/Save-Clip-App-712524031-18377334682165922-2555696126096709958-n.jpg"
+                    alt="Recepción de Inmedentec"
+                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                    referrerPolicy="no-referrer"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex-1">
+                  <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2.5 py-1 rounded-full">
+                    BIENVENIDA CÁLIDA
+                  </span>
+                  <h4 className="font-heading font-black text-sm text-[#263238] mt-1">Sala de Espera y Admisión Higienizada</h4>
+                  <p className="font-sans text-xs text-gray-500 mt-1 leading-relaxed">
+                    Nuestra central de atención al cliente en Durán te brinda un ingreso cómodo, ágil y totalmente ordenado, con personal administrativo listo para resolver tus inquietudes clínicas.
+                  </p>
+                </div>
               </div>
 
               {/* Confidence certification badge */}
@@ -1527,10 +1560,10 @@ export default function App() {
                     <div className="text-center md:text-right space-y-2">
                       <p className="text-xs text-gray-500 font-bold">¿Deseas atención acelerada?</p>
                       <a
-                        href={`https://wa.me/593968609865?text=Hola%20Imedent!%20He%20generado%20la%20reserva%20en%20línea%20con%20ID%20${createdAppointment.id}%20para%20la%20fecha%20${createdAppointment.date}%20a%20las%20${createdAppointment.timeSlot}.%20Quisiera%20confirmar%20de%20forma%20inmediata.`}
+                        href={`https://wa.me/593968609865?text=Hola%20Inmedentec!%20He%20generado%20la%20reserva%20en%20línea%20con%20ID%20${createdAppointment.id}%20para%20la%20fecha%20${createdAppointment.date}%20a%20las%20${createdAppointment.timeSlot}.%20Quisiera%20confirmar%20de%20forma%20inmediata.`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-[#21C58E] text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow"
+                        className="inline-flex items-center gap-2 bg-[#00A9FF] hover:bg-[#00A9FF]/90 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow"
                       >
                         <Phone className="w-3.5 h-3.5" />
                         <span>Enviar al WhatsApp</span>
@@ -1740,54 +1773,47 @@ export default function App() {
             {/* Right Column: Modern Real Photography Showcase & Quality Accents (4 columns) */}
             <div className="lg:col-span-4 flex flex-col gap-6">
               
-              {/* Photo 1 Card: State of the art workspace */}
-              <div className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-md flex flex-col gap-4 group hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-50 shadow-inner">
+              {/* Photo Card: General Medical Consulting Box - NO CROPPING */}
+              <div className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-2xl transition-all duration-300">
+                <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
                   <img
-                    src="https://i.ibb.co/6JZWGqb3/Save-Clip-App-727799021-18379686019165922-1213207141689684578-n.jpg"
-                    alt="Consultorios médicos e interior de Imedent"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src="https://i.ibb.co/xKJwXvm8/Save-Clip-App-670408691-18371017180165922-5133365789952151054-n.jpg"
+                    alt="Consultorio General Confortable de Inmedentec"
+                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                     referrerPolicy="no-referrer"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <span className="absolute bottom-3 left-3 text-[10px] font-extrabold uppercase tracking-widest text-white bg-gradient-to-r from-[#0B5ED7] to-[#21C58E] px-3 py-1 rounded-full shadow">
-                    CONSULTORIOS DEL FUTURO
-                  </span>
                 </div>
-                <div>
-                  <h4 className="font-heading font-extrabold text-sm text-[#263238] group-hover:text-[#0B5ED7] transition-colors leading-snug">
-                    Áreas de Diagnóstico & Consulta
+                <div className="flex-1">
+                  <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2.5 py-1 rounded-full">
+                    INFRAESTRUCTURA DE PRIMER NIVEL
+                  </span>
+                  <h4 className="font-heading font-black text-sm text-[#263238] mt-2 group-hover:text-[#0B5ED7] transition-colors leading-snug">
+                    Consultorios Clínicos Acreditados
                   </h4>
-                  <p className="font-sans text-xs text-gray-500 mt-1 leading-relaxed">
-                    Nuestras oficinas y cubículos médicos respetan tu confidencialidad absoluta mediante aislamiento acústico y aire purificado con filtración HEPA.
+                  <p className="font-sans text-xs text-gray-500 mt-1.5 leading-relaxed">
+                    Nuestros cubículos de consulta y valoración general están completamente climatizados y aprobados por ACESS, garantizando espacios limpios, privados y con la esterilización de nivel clínico que merece tu salud familiar.
                   </p>
                 </div>
               </div>
 
-              {/* Photo 2 Card: Advanced Technology */}
-              <div className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-md flex flex-col gap-4 group hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-50 shadow-inner">
-                  <img
-                    src="https://i.ibb.co/Fqk8MKDq/Save-Clip-App-658171838-1705697040653889-7004509995493784262-n.jpg"
-                    alt="Tecnología dental avanzada en Durán"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <span className="absolute bottom-3 left-3 text-[10px] font-extrabold uppercase tracking-widest text-[#263238] bg-white/95 backdrop-blur px-3 py-1.5 rounded-full border border-gray-100 shadow">
-                    ODONTOLOGÍA SIN MIEDO
-                  </span>
-                </div>
-                <div>
-                  <h4 className="font-heading font-extrabold text-sm text-[#263238] group-hover:text-[#0B5ED7] transition-colors leading-snug">
-                    Sistemas Clínicos de Última Generación
-                  </h4>
-                  <p className="font-sans text-xs text-gray-500 mt-1 leading-relaxed">
-                    Contamos con equipos que cuidan cada pieza dental bajo enfoques mínimamente invasivos y radiología digital que expone hasta un 90% menos de radiación.
-                  </p>
-                </div>
+              {/* High-fidelity visual trust badges block to back the reservation experience */}
+              <div className="bg-gradient-to-tr from-[#1E2A5E]/5 to-[#00A9FF]/5 rounded-3xl p-5 border border-blue-100/40 text-[#1E2A5E]">
+                <h5 className="font-heading font-black text-xs uppercase tracking-wider mb-2">Garantía Inmedentec</h5>
+                <ul className="text-xs space-y-1.5 font-sans font-medium text-slate-600">
+                  <li className="flex items-center gap-1.5">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#00A9FF]" />
+                    Atención puntual bajo reservación médica.
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#00A9FF]" />
+                    Precios transparentes sin costos ocultos.
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#00A9FF]" />
+                    Informes de ecografía y diagnóstico entregados al instante.
+                  </li>
+                </ul>
               </div>
 
             </div>
@@ -2087,7 +2113,7 @@ export default function App() {
                 </h3>
 
                 <div className="flex items-center gap-3 text-xs text-gray-400 font-semibold border-b border-gray-100 pb-4">
-                  <span>Por Dr. Especialista Imedent</span>
+                  <span>Por Dr. Especialista Inmedentec</span>
                   <span className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
                   <span>{selectedBlogPost.date}</span>
                   <span className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
@@ -2276,12 +2302,12 @@ export default function App() {
 
               {/* Pin pointing the clinic location */}
               <div className="absolute top-[180px] left-[320px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                <div className="p-3 bg-gradient-to-tr from-[#0B5ED7] to-[#21C58E] text-white rounded-full shadow-lg relative animate-bounce z-10">
+                <div className="p-3 bg-gradient-to-tr from-[#1E2A5E] to-[#00A9FF] text-white rounded-full shadow-lg relative animate-bounce z-10">
                   <Stethoscope className="w-6 h-6" />
-                  <span className="absolute -top-1 -right-1 w-3 h-3 bg-pink-500 rounded-full animate-ping" />
+                  <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#7DDAE8] rounded-full animate-ping" />
                 </div>
-                <div className="bg-white/95 px-3 py-1.5 rounded-xl shadow-lg border border-gray-100 text-[11px] font-black tracking-tight text-[#263238] mt-1 whitespace-nowrap">
-                  Imedent Centro Médico (Durán)
+                <div className="bg-white/95 px-3 py-1.5 rounded-xl shadow-lg border border-gray-100 text-[11px] font-black tracking-tight text-[#1E2A5E] mt-1 whitespace-nowrap">
+                  Inmedentec Centro Médico (Durán)
                 </div>
               </div>
 
@@ -2328,7 +2354,7 @@ export default function App() {
           
           {/* Button WhatsApp */}
           <a
-            href="https://wa.me/593968609865?text=Hola%20Imedent!%20Deseo%20coordinar%20una%20revisión%20médica."
+            href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Deseo%20coordinar%20una%20revisión%20médica."
             target="_blank"
             rel="noopener noreferrer"
             className="w-14 h-14 bg-[#21C58E] hover:bg-[#1EAF7E] text-white rounded-full flex items-center justify-center shadow-xl active:scale-95 transition-all duration-200"
@@ -2365,7 +2391,7 @@ export default function App() {
               role="complementary"
             >
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#263238] to-[#1E272C] p-4 text-white flex items-center justify-between">
+            <div className="bg-[#1E2A5E] p-4 text-white flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl overflow-hidden bg-white border border-white/20">
                   <img 
@@ -2377,10 +2403,10 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="font-heading font-extrabold text-sm flex items-center gap-1.5">
-                    <span>ImedentBot</span>
-                    <span className="w-2 h-2 rounded-full bg-[#21C58E] animate-pulse" />
+                    <span>InmedentecBot</span>
+                    <span className="w-2 h-2 rounded-full bg-[#7DDAE8] animate-pulse" />
                   </h4>
-                  <p className="text-[10px] text-gray-300">Asistente Virtual IA • En Línea</p>
+                  <p className="text-[10px] text-gray-200">Asistente Virtual IA • En Línea</p>
                 </div>
               </div>
 
@@ -2417,7 +2443,7 @@ export default function App() {
                   <div
                     className={`max-w-[85%] rounded-2xl p-3 shadow-sm ${
                       msg.role === "user"
-                        ? "bg-[#0B5ED7] text-white rounded-tr-none"
+                        ? "bg-[#1E2A5E] text-white rounded-tr-none"
                         : "bg-white text-[#263238] rounded-tl-none border border-gray-100"
                     }`}
                   >
@@ -2432,8 +2458,8 @@ export default function App() {
               {isChatSending && (
                 <div className="flex justify-start">
                   <div className="bg-white rounded-2xl p-3 border border-gray-100 flex items-center gap-2">
-                    <Loader2 className="w-4 h-4 animate-spin text-[#0B5ED7]" />
-                    <span className="text-[10px] text-gray-400">ImedentBot está pensando...</span>
+                    <Loader2 className="w-4 h-4 animate-spin text-[#00A9FF]" />
+                    <span className="text-[10px] text-gray-400">InmedentecBot está pensando...</span>
                   </div>
                 </div>
               )}
@@ -2483,15 +2509,15 @@ export default function App() {
                     ? "Escribe tu Nombre..."
                     : waitingForLeadStep === "phone"
                     ? "Escribe tu Teléfono..."
-                    : "Pregunta algo sobre Imedent..."
+                    : "Pregunta algo sobre Inmedentec..."
                 }
-                className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#0B5ED7]"
+                className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#00A9FF]"
               />
               
               <button
                 onClick={() => sendMessageToBot()}
                 disabled={!chatInput.trim() || isChatSending}
-                className="p-2.5 bg-[#0B5ED7] hover:bg-blue-700 disabled:bg-gray-300 text-white rounded-xl transition-colors cursor-pointer"
+                className="p-2.5 bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 disabled:bg-gray-300 text-white rounded-xl transition-colors cursor-pointer"
                 title="Enviar mensaje"
               >
                 <Send className="w-4.5 h-4.5" />
@@ -2510,7 +2536,7 @@ export default function App() {
       </div>
 
       {/* 🔮 GROUNDED FOOTER & TRUST CENTER */}
-      <footer id="grounded-footer" className="relative bg-[#1A2327] border-t border-slate-800/80 text-slate-200 pt-10 pb-6 overflow-hidden">
+      <footer id="grounded-footer" className="relative bg-[#0B121F] border-t border-slate-800/80 text-slate-200 pt-10 pb-6 overflow-hidden">
         {/* Subtle background decorative shapes */}
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -2526,34 +2552,34 @@ export default function App() {
                 <div className="w-9 h-9 rounded-xl overflow-hidden border border-slate-700 bg-white p-0.5 shadow-md">
                   <img 
                     src="https://i.ibb.co/wN2zzSsw/FB-IMG-1781954245363.jpg" 
-                    alt="Logo Imedent" 
+                    alt="Logo Inmedentec" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover rounded-lg" 
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-heading font-black text-xs text-[#21C58E] uppercase tracking-wider leading-none">
-                    Imedent Centro Médico
+                  <span className="font-heading font-black text-xs text-[#00A9FF] uppercase tracking-wider leading-none">
+                    Inmedentec Clínica Médica & Dental
                   </span>
-                  <span className="font-sans font-medium text-[9px] text-gray-500 tracking-widest uppercase">
+                  <span className="font-sans font-medium text-[9px] text-gray-400 tracking-widest uppercase">
                     Salud Familiar • Durán
                   </span>
                 </div>
               </div>
               
-              <p className="font-sans text-xs text-gray-400 leading-relaxed max-w-xl">
-                Clínica médico-dental especializada en <span className="italic text-white">Durán, Guayas</span>. Ofrecemos cuidado de la <span className="italic text-white font-medium">salud de alta calidad</span> mediante tecnología diagnóstica avanzada, odontología de alta gama y ginecología profesional con <span className="italic text-[#21C58E]">calidez</span>.
+              <p className="font-sans text-xs text-slate-300 leading-relaxed max-w-xl">
+                Clínica médico-dental especializada en <span className="italic text-white">Durán, Guayas</span>. Ofrecemos cuidado de la <span className="italic text-white font-medium">salud de alta calidad</span> mediante tecnología diagnóstica avanzada, odontología de alta gama, cardiología profesional, ecografías y laboratorio clínico con <span className="italic text-[#7DDAE8]">calidez</span>.
               </p>
 
               {/* Technical badges and Social Channels in one row for maximum compactness */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <div className="flex gap-2">
                   <span className="inline-flex items-center gap-1 text-[9px] font-mono bg-slate-800/40 text-slate-300 border border-slate-700/40 px-2 py-0.5 rounded-md">
-                    <ShieldCheck className="w-2.5 h-2.5 text-[#21C58E]" />
+                    <ShieldCheck className="w-2.5 h-2.5 text-[#7DDAE8]" />
                     Registro ACESS
                   </span>
                   <span className="inline-flex items-center gap-1 text-[9px] font-mono bg-slate-800/40 text-slate-300 border border-slate-700/40 px-2 py-0.5 rounded-md">
-                    <Award className="w-2.5 h-2.5 text-[#0B5ED7]" />
+                    <Award className="w-2.5 h-2.5 text-[#00A9FF]" />
                     Aprobado MSP
                   </span>
                 </div>
@@ -2669,7 +2695,7 @@ export default function App() {
           <div className="pt-4 flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
             <div className="space-y-0.5">
               <p className="text-[10px] text-gray-500 font-sans leading-normal">
-                &copy; {new Date().getFullYear()} Imedent Centro Médico. Todos los derechos reservados. No garantizamos diagnósticos finales a través de consultas virtuales; toda sugerencia del asistente virtual debe ser validada presencialmente por un médico titulado.
+                &copy; {new Date().getFullYear()} Inmedentec Clínica Médica & Dental. Todos los derechos reservados. No garantizamos diagnósticos finales a través de consultas virtuales; toda sugerencia del asistente virtual debe ser validada presencialmente por un médico titulado.
               </p>
               <p className="text-[9px] text-gray-600 font-mono">
                 ACESS Reg. No. SL-2024-092-A • Durán, Guayas, República del Ecuador.
