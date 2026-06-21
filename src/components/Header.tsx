@@ -81,7 +81,9 @@ export default function Header() {
             </a>
             
             <a
-              href="#reserva"
+              href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20médica."
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs font-bold text-white bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 hover:shadow-lg hover:shadow-indigo-900/10 active:scale-95 transition-all px-6 py-2.5 rounded-full shadow-md"
             >
               <Calendar className="w-3.5 h-3.5 text-[#7DDAE8]" />
@@ -92,7 +94,9 @@ export default function Header() {
           {/* Mobile menu trigger */}
           <div className="md:hidden flex items-center gap-2">
             <a
-              href="#reserva"
+              href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20médica."
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 bg-[#1E2A5E] text-white rounded-full hover:bg-opacity-95"
               title="Reservar Cita"
             >
@@ -137,7 +141,9 @@ export default function Header() {
               <span>WhatsApp</span>
             </a>
             <a
-              href="#reserva"
+              href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20médica."
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full text-sm font-bold text-white bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 py-3 rounded-full shadow-md"
             >

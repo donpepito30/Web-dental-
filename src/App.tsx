@@ -430,8 +430,10 @@ export default function App() {
 
               {/* Call To Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <a
-                  href="#reserva"
+                 <a
+                  href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20médica."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 bg-[#00A9FF] hover:bg-[#00A9FF]/90 text-white font-bold text-base rounded-full shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200"
                   id="hero-cta-booking"
                 >
@@ -835,13 +837,10 @@ export default function App() {
                 {/* Call to actions in modal */}
                 <div className="flex gap-3">
                   <a
-                    href="#reserva"
+                    href={`https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20de%20valoración%20para%20el%20servicio%20de%20${encodeURIComponent(selectedDetailedService.name)}.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => {
-                      setFormData(prev => ({
-                        ...prev,
-                        specialty: selectedDetailedService.specialty,
-                        service: selectedDetailedService.name
-                      }));
                       setSelectedDetailedService(null);
                     }}
                     className="flex-1 text-center py-3.5 bg-[#0B5ED7] hover:bg-blue-700 text-white font-bold text-xs rounded-xl uppercase tracking-widest shadow-md transition-colors"
@@ -1088,18 +1087,12 @@ export default function App() {
 
                         {/* Immediate Action Trigger to populate booking form */}
                         <a
-                          href="#reserva"
-                          onClick={() => {
-                            setFormData((prev) => ({
-                              ...prev,
-                              specialty: promo.specialty,
-                              service: "Limpieza Dental con Ultrasonido",
-                              comments: `Quiero acceder a la promoción: ${promo.title}`
-                            }));
-                          }}
+                          href={`https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20separar%20mi%20cupo%20para%20la%20promoción:%20${encodeURIComponent(promo.title)}.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#0B5ED7] hover:bg-[#0D6EFD] text-white font-bold text-xs rounded-xl uppercase tracking-widest shadow transition-colors"
                         >
-                          <span>Reservar cita</span>
+                          <span>Separar por WhatsApp</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </a>
                       </div>
@@ -1210,18 +1203,12 @@ export default function App() {
 
                         {/* Immediate Action Trigger to populate booking form */}
                         <a
-                          href="#reserva"
-                          onClick={() => {
-                            setFormData((prev) => ({
-                              ...prev,
-                              specialty: promo.specialty,
-                              service: promo.title === "Pack de Ecografías Especiales" ? "Ecografías Especializadas" : "Medicina General",
-                              comments: `Quiero acceder a la promoción: ${promo.title}`
-                            }));
-                          }}
+                          href={`https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20separar%20mi%20cupo%20para%20la%20promoción:%20${encodeURIComponent(promo.title)}.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#0B5ED7] hover:bg-[#0D6EFD] text-white font-bold text-xs rounded-xl uppercase tracking-widest shadow transition-colors"
                         >
-                          <span>Reservar cita</span>
+                          <span>Separar por WhatsApp</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </a>
                       </div>
@@ -1327,337 +1314,10 @@ export default function App() {
                 onClick={handleTestimonialNext}
                 className="p-2.5 bg-white border border-gray-200 text-[#263238] hover:bg-[#0B5ED7] hover:text-white rounded-full transition-colors shadow shadow-sm active:scale-95 cursor-pointer"
                 aria-label="Siguiente testimonio"
+
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* 📝 8. BOOKING FORM SECTION & REAL-TIME INTERACTION */}
-      <section id="reserva" className="py-20 bg-[#F5F7FA] relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            
-            {/* Left Column: Form & Header Banner (8 columns) */}
-            <div className="lg:col-span-8 bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-100 flex flex-col justify-between">
-              
-              {/* Form Header Banner */}
-              <div className="bg-gradient-to-r from-[#263238] to-[#1E272C] py-8 px-6 sm:px-10 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-center sm:text-left space-y-1">
-                  <h2 className="font-heading font-extrabold text-2xl">Módulo de Reserva Personalizada</h2>
-                  <p className="font-sans text-xs text-gray-300">Agenda tu consulta de valoración en pocos clics. Disponibilidad garantizada.</p>
-                </div>
-                
-                <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl text-xs font-semibold backdrop-blur-sm self-start sm:self-center">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#21C58E] animate-ping" />
-                  <span>Especialistas Disponibles Hoy</span>
-                </div>
-              </div>
-
-              {/* Form Body layout */}
-              <div className="p-6 sm:p-10 flex-1">
-                
-                {/* Submission results banner */}
-                {submitMessage && (
-                  <div
-                    className={`p-4 rounded-xl mb-6 flex gap-3 ${
-                      submitMessage.type === "success"
-                        ? "bg-emerald-50 border border-emerald-200 text-[#21C58E]"
-                        : "bg-red-50 border border-red-200 text-red-600"
-                    }`}
-                  >
-                    <CheckCircle2 className="w-5 h-5 shrink-0" />
-                    <div>
-                      <p className="font-bold text-sm">Respuesta del Sistema:</p>
-                      <p className="text-xs">{submitMessage.text}</p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Show Custom Digital Ticket if successfully created in memory state */}
-                {createdAppointment && (
-                  <div className="mb-8 p-6 bg-gradient-to-tr from-blue-50 to-emerald-50 rounded-2xl border border-blue-100 flex flex-col md:flex-row items-center justify-between gap-6 relative">
-                    <div className="space-y-2 text-[#263238]">
-                      <div className="flex items-center gap-1.5 text-xs text-blue-600 font-bold uppercase tracking-wider">
-                        <Award className="w-4 h-4" />
-                        <span>Cita Pendiente de Confirmación</span>
-                      </div>
-                      <p className="font-heading font-extrabold text-lg">ID de Ticket: <span className="text-[#0B5ED7]">{createdAppointment.id}</span></p>
-                      <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 font-sans text-xs">
-                        <p><strong>Paciente:</strong> {createdAppointment.name}</p>
-                        <p><strong>Teléfono:</strong> {createdAppointment.phone}</p>
-                        <p><strong>Especialidad:</strong> <span className="capitalize">{createdAppointment.specialty}</span></p>
-                        <p><strong>Servicio:</strong> {createdAppointment.service}</p>
-                        <p><strong>Fecha reservada:</strong> {createdAppointment.date}</p>
-                        <p><strong>Hora:</strong> {createdAppointment.timeSlot} hrs</p>
-                      </div>
-                    </div>
-
-                    <div className="text-center md:text-right space-y-2">
-                      <p className="text-xs text-gray-500 font-bold">¿Deseas atención acelerada?</p>
-                      <a
-                        href={`https://wa.me/593968609865?text=Hola%20Inmedentec!%20He%20generado%20la%20reserva%20en%20línea%20con%20ID%20${createdAppointment.id}%20para%20la%20fecha%20${createdAppointment.date}%20a%20las%20${createdAppointment.timeSlot}.%20Quisiera%20confirmar%20de%20forma%20inmediata.`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-[#00A9FF] hover:bg-[#00A9FF]/90 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow"
-                      >
-                        <Phone className="w-3.5 h-3.5" />
-                        <span>Enviar al WhatsApp</span>
-                      </a>
-                    </div>
-                  </div>
-                )}
-
-                <form onSubmit={handleBookingSubmit} className="space-y-6">
-                  
-                  {/* Field Row 1 */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="form-name" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                        Nombre Completo *
-                      </label>
-                      <input
-                        id="form-name"
-                        type="text"
-                        required
-                        placeholder="Ej: Sofía Herrera"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="form-phone" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                        Teléfono WhatsApp *
-                      </label>
-                      <input
-                        id="form-phone"
-                        type="tel"
-                        required
-                        placeholder="Ej: 0991234567"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all"
-                      />
-                    </div>
-
-                  </div>
-
-                  {/* Field Row 2 */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="form-email" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                        Correo Electrónico *
-                      </label>
-                      <input
-                        id="form-email"
-                        type="email"
-                        required
-                        placeholder="Ej: sofia@example.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all"
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="form-date" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                          Fecha Preferida *
-                        </label>
-                        <input
-                          id="form-date"
-                          type="date"
-                          required
-                          value={formData.date}
-                          min={new Date().toISOString().split("T")[0]}
-                          onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                          className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-xs focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all cursor-pointer"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <label htmlFor="form-time" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                          Hora Preferida *
-                        </label>
-                        <select
-                          id="form-time"
-                          value={formData.timeSlot}
-                          onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
-                          className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-xs focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all cursor-pointer"
-                        >
-                          <option value="09:00">09:00 hrs</option>
-                          <option value="09:30">09:30 hrs</option>
-                          <option value="10:00">10:00 hrs</option>
-                          <option value="10:30">10:30 hrs</option>
-                          <option value="11:00">11:00 hrs</option>
-                          <option value="11:30">11:30 hrs</option>
-                          <option value="14:00">14:00 hrs</option>
-                          <option value="14:30">14:30 hrs</option>
-                          <option value="15:00">15:00 hrs</option>
-                          <option value="15:30">15:30 hrs</option>
-                          <option value="16:00">16:00 hrs</option>
-                          <option value="17:00">17:00 hrs</option>
-                        </select>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  {/* Field Row 3 */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    <div className="space-y-2">
-                      <label className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                        Especialidad de Visita *
-                      </label>
-                      <div className="flex gap-4">
-                        
-                        <label className="flex-1 flex items-center justify-between p-3 bg-gray-50 hover:bg-emerald-50 rounded-xl border border-gray-100 hover:border-[#21C58E] cursor-pointer transition-all">
-                          <div className="flex items-center gap-2">
-                            <input
-                              type="radio"
-                              name="radio-specialty"
-                              checked={formData.specialty === "odontologia"}
-                              onChange={() => setFormData({ ...formData, specialty: "odontologia" })}
-                              className="text-[#0B5ED7]"
-                            />
-                            <span className="text-sm font-bold">Odontología</span>
-                          </div>
-                          <span className="w-2.5 h-2.5 rounded-full bg-[#21C58E]" />
-                        </label>
-
-                        <label className="flex-1 flex items-center justify-between p-3 bg-gray-50 hover:bg-blue-50 rounded-xl border border-gray-100 hover:border-[#0B5ED7] cursor-pointer transition-all">
-                          <div className="flex items-center gap-2">
-                            <input
-                              type="radio"
-                              name="radio-specialty"
-                              checked={formData.specialty === "medicina"}
-                              onChange={() => setFormData({ ...formData, specialty: "medicina" })}
-                              className="text-[#0B5ED7]"
-                            />
-                            <span className="text-sm font-bold">Medicina Familiar</span>
-                          </div>
-                          <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
-                        </label>
-
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="form-service" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                        Servicio Específico Requerido *
-                      </label>
-                      <select
-                        id="form-service"
-                        value={formData.service}
-                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-xs focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all cursor-pointer"
-                      >
-                        {SERVICES_DATA.filter((s) => s.specialty === formData.specialty).map((s) => (
-                          <option key={s.id} value={s.name}>
-                            {s.name}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                  </div>
-
-                  {/* Optional comments field */}
-                  <div className="space-y-2">
-                    <label htmlFor="form-comments" className="text-xs text-gray-600 uppercase font-bold tracking-wider">
-                      Comentarios, Sintomatologías o Dudas (Opcional)
-                    </label>
-                    <textarea
-                      id="form-comments"
-                      rows={2}
-                      placeholder="Cuéntanos brevemente si es una consulta de control, dolor agudo, o mantenimiento..."
-                      value={formData.comments}
-                      onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:ring-2 focus:ring-[#0B5ED7] focus:outline-none transition-all"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-4 bg-gradient-to-r from-[#0B5ED7] to-[#0D6EFD] hover:from-blue-700 hover:to-blue-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-blue-500/20 active:scale-95 transition-all duration-200 uppercase tracking-widest text-xs flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
-                        <span>Procesando Reserva...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Calendar className="w-5 h-5" />
-                        <span>Reservar cita</span>
-                      </>
-                    )}
-                  </button>
-
-                </form>
-
-              </div>
-
-            </div>
-
-            {/* Right Column: Modern Real Photography Showcase & Quality Accents (4 columns) */}
-            <div className="lg:col-span-4 flex flex-col gap-6">
-              
-              {/* Photo Card: General Medical Consulting Box - NO CROPPING */}
-              <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 rounded-3xl p-4 sm:p-5 border border-blue-100/60 shadow-md flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-2xl transition-all duration-300">
-                <div className="w-[35%] sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
-                  <img
-                    src="https://i.ibb.co/xKJwXvm8/Save-Clip-App-670408691-18371017180165922-5133365789952151054-n.jpg"
-                    alt="Consultorio General Confortable de Inmedentec"
-                    className="w-full h-auto object-contain max-h-[120px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2.5 py-1 rounded-full">
-                    INFRAESTRUCTURA DE PRIMER NIVEL
-                  </span>
-                  <h4 className="font-heading font-black text-sm text-[#263238] mt-2 group-hover:text-[#0B5ED7] transition-colors leading-snug">
-                    Consultorios Clínicos Acreditados
-                  </h4>
-                  <p className="font-sans text-xs text-gray-500 mt-1.5 leading-relaxed">
-                    Nuestros cubículos de consulta y valoración general están completamente climatizados y aprobados por ACESS, garantizando espacios limpios, privados y con la esterilización de nivel clínico que merece tu salud familiar.
-                  </p>
-                </div>
-              </div>
-
-              {/* High-fidelity visual trust badges block to back the reservation experience */}
-              <div className="bg-gradient-to-tr from-[#1E2A5E]/5 to-[#00A9FF]/5 rounded-3xl p-5 border border-blue-100/40 text-[#1E2A5E]">
-                <h5 className="font-heading font-black text-xs uppercase tracking-wider mb-2">Garantía Inmedentec</h5>
-                <ul className="text-xs space-y-1.5 font-sans font-medium text-slate-600">
-                  <li className="flex items-center gap-1.5">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#00A9FF]" />
-                    Atención puntual bajo reservación médica.
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#00A9FF]" />
-                    Precios transparentes sin costos ocultos.
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <ChevronRight className="w-3.5 h-3.5 text-[#00A9FF]" />
-                    Informes de ecografía y diagnóstico entregados al instante.
-                  </li>
-                </ul>
-              </div>
-
             </div>
 
           </div>
@@ -2112,7 +1772,9 @@ export default function App() {
                     <Instagram className="w-3.5 h-3.5" />
                   </a>
                   <a 
-                    href="#reserva" 
+                    href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20solicitar%20asistencia%20en%20línea." 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-7 h-7 rounded-md bg-slate-800/80 hover:bg-[#21C58E] hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm text-gray-400"
                     title="Asistencia Virtual"
                   >
@@ -2208,7 +1870,7 @@ export default function App() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-3 text-[9px] text-gray-500 shrink-0">
-              <a href="#reserva" className="hover:text-white hover:underline transition-colors">Protección de Datos</a>
+              <a href="#" className="hover:text-white hover:underline transition-colors">Protección de Datos</a>
               <span className="text-slate-800">|</span>
               <a href="#contacto" className="hover:text-white hover:underline transition-colors">Términos de Cita</a>
               <span className="text-slate-800">|</span>
