@@ -181,7 +181,7 @@ export default function ClinicGallery() {
         </div>
 
         {/* Feature Highlights Grid */}
-        <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+        <div className="mt-12 bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 rounded-3xl p-6 sm:p-8 border border-blue-100/60 shadow-md grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
             <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-[#0B5ED7] shrink-0">
               <ShieldCheck className="w-6 h-6" />

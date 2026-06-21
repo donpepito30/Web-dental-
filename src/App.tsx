@@ -482,41 +482,41 @@ export default function App() {
       </section>
 
       {/* 📊 2. CLINICAL STATS SECTION */}
-      <section className="bg-gradient-to-r from-[#263238] to-[#1E272C] py-12 text-white relative overflow-hidden" id="estadisticas">
+      <section className="bg-gradient-to-r from-[#263238] to-[#1E272C] py-8 sm:py-12 text-white relative overflow-hidden" id="estadisticas">
         <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,#21C58E_1px,transparent_1px),linear-gradient(-45deg,#0B5ED7_1px,transparent_1px)] bg-[size:20px_20px]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-4 gap-1 sm:gap-4 md:gap-8 text-center items-center">
             
-             <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all">
-              <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#21C58E]" id="stat-patients">
+             <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all">
+              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#21C58E]" id="stat-patients">
                 <AnimatedNumber value="+8,500" />
               </p>
-              <p className="text-sm text-gray-300 font-semibold italic">Pacientes Satisfechos</p>
-              <p className="text-xs text-gray-400 italic">Atendidos en Durán</p>
+              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Pacientes Satisfechos</p>
+              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Atendidos en Durán</p>
             </div>
 
-            <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all border-t sm:border-t-0 sm:border-l border-white/10">
-              <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#0B5ED7] inline-flex items-center gap-1">
-                <AnimatedNumber value="12" /> <span className="text-lg text-white font-normal">años</span>
+            <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all border-l border-white/10">
+              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#0B5ED7] inline-flex items-center gap-0.5 sm:gap-1">
+                <AnimatedNumber value="12" /> <span className="text-[10px] sm:text-lg text-white font-normal">años</span>
               </p>
-              <p className="text-sm text-gray-300 font-semibold italic">Experiencia Médica Clinica</p>
-              <p className="text-xs text-gray-400 italic">Trayectoria impecable</p>
+              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Experiencia Médica</p>
+              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Trayectoria clínica</p>
             </div>
 
-            <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all border-t lg:border-t-0 lg:border-l border-white/10">
-              <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#21C58E]">
+            <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all border-l border-white/10">
+              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#21C58E]">
                 <AnimatedNumber value="99.4%" />
               </p>
-              <p className="text-sm text-gray-300 font-semibold italic">Nivel de Satisfacción</p>
-              <p className="text-xs text-gray-400 italic">Evaluado en encuestas de salida</p>
+              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Nivel Satisfacción</p>
+              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Encuestas de salida</p>
             </div>
 
-            <div className="space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-all border-t lg:border-t-0 lg:border-l border-white/10">
-              <p className="font-heading font-extrabold text-4xl lg:text-5xl text-[#0B5ED7]" id="stat-doctors">
+            <div className="space-y-0.5 sm:space-y-1 p-1 sm:p-4 rounded-2xl hover:bg-white/5 transition-all border-l border-white/10">
+              <p className="font-heading font-extrabold text-xl sm:text-4xl lg:text-5xl text-[#0B5ED7]" id="stat-doctors">
                 <AnimatedNumber value="100%" />
               </p>
-              <p className="text-sm text-gray-300 font-semibold italic">Bioseguridad & Normas</p>
-              <p className="text-xs text-gray-400 italic">Acreditados por ACESS</p>
+              <p className="text-[10px] sm:text-sm text-gray-300 font-semibold italic leading-tight">Bioseguridad</p>
+              <p className="text-[9px] sm:text-xs text-gray-400 italic leading-tight">Acreditada ACESS</p>
             </div>
 
           </div>
@@ -657,17 +657,17 @@ export default function App() {
                         ))}
                       </div>
                       <div className="lg:col-span-5">
-                        <div className="bg-white p-5 rounded-3xl border border-gray-200/60 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-xl transition-all duration-300">
-                          <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+                        <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 p-4 sm:p-5 rounded-3xl border border-blue-100/60 shadow-md flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-xl transition-all duration-300">
+                          <div className="w-[35%] sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
                             <img
                               src="https://i.ibb.co/93myLNr3/Save-Clip-App-658171838-1705697040653889-7004509995493784262-n.jpg"
                               alt="Consultorio Odontológico de Inmedentec"
-                              className="w-full h-auto object-contain max-h-[220px] sm:max-h-[300px] rounded-xl transition-all duration-500 group-hover:scale-[1.02]"
+                              className="w-full h-auto object-contain max-h-[120px] sm:max-h-[300px] rounded-xl transition-all duration-500 group-hover:scale-[1.02]"
                               referrerPolicy="no-referrer"
                               loading="lazy"
                             />
                           </div>
-                          <div className="flex-1">
+                          <div className="flex-1 min-w-0">
                             <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2 py-0.5 rounded">
                               ODONTOLOGÍA SIN MIEDO
                             </span>
@@ -790,17 +790,17 @@ export default function App() {
                         ))}
                       </div>
                       <div className="lg:col-span-5">
-                        <div className="bg-white p-5 rounded-3xl border border-gray-200/60 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-xl transition-all duration-300">
-                          <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+                        <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 p-4 sm:p-5 rounded-3xl border border-blue-100/60 shadow-md flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-xl transition-all duration-300">
+                          <div className="w-[35%] sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
                             <img
                               src="https://i.ibb.co/prPLNkZt/Save-Clip-App-727799021-18379686019165922-1213207141689684578-n.jpg"
                               alt="Consultorio de Ginecología y Ecografía de Inmedentec"
-                              className="w-full h-auto object-contain max-h-[220px] sm:max-h-[300px] rounded-xl transition-all duration-500 group-hover:scale-[1.02]"
+                              className="w-full h-auto object-contain max-h-[120px] sm:max-h-[300px] rounded-xl transition-all duration-500 group-hover:scale-[1.02]"
                               referrerPolicy="no-referrer"
                               loading="lazy"
                             />
                           </div>
-                          <div className="flex-1">
+                          <div className="flex-1 min-w-0">
                             <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#21C58E] bg-emerald-50 px-2 py-0.5 rounded">
                               TECNOLOGÍA DE ECOGRAFÍA
                             </span>
@@ -958,17 +958,17 @@ export default function App() {
               </p>
 
               {/* Real Reception / Facilities Photo Showcase - NO CROPPING */}
-              <div className="bg-white rounded-3xl border border-gray-200/60 p-5 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-xl transition-all duration-300">
-                <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+              <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 rounded-3xl border border-blue-100/60 p-4 sm:p-5 shadow-md flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-xl transition-all duration-300">
+                <div className="w-[35%] sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
                   <img
                     src="https://i.ibb.co/4w4tgWY6/Save-Clip-App-712524031-18377334682165922-2555696126096709958-n.jpg"
                     alt="Recepción de Inmedentec"
-                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-auto object-contain max-h-[120px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                     referrerPolicy="no-referrer"
                     loading="lazy"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2.5 py-1 rounded-full">
                     BIENVENIDA CÁLIDA
                   </span>
@@ -1404,7 +1404,7 @@ export default function App() {
       </section>
 
       {/* 🔢 7. ATTENTION PROCESS IN 4 EASY STEPS */}
-      <section className="py-20 bg-white" id="proceso">
+      <section className="py-20 bg-gradient-to-b from-white via-blue-50/10 to-[#F8FAFC]" id="proceso">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -1774,17 +1774,17 @@ export default function App() {
             <div className="lg:col-span-4 flex flex-col gap-6">
               
               {/* Photo Card: General Medical Consulting Box - NO CROPPING */}
-              <div className="bg-white rounded-3xl p-5 border border-gray-200/60 shadow-md flex flex-col sm:flex-row items-center gap-5 group hover:shadow-2xl transition-all duration-300">
-                <div className="w-full sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
+              <div className="bg-gradient-to-br from-[#00A9FF]/10 to-[#1E2A5E]/5 rounded-3xl p-4 sm:p-5 border border-blue-100/60 shadow-md flex flex-row items-center gap-4 sm:gap-5 group hover:shadow-2xl transition-all duration-300">
+                <div className="w-[35%] sm:w-2/5 shrink-0 rounded-2xl overflow-hidden bg-gray-50 flex items-center justify-center p-1">
                   <img
                     src="https://i.ibb.co/xKJwXvm8/Save-Clip-App-670408691-18371017180165922-5133365789952151054-n.jpg"
                     alt="Consultorio General Confortable de Inmedentec"
-                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-auto object-contain max-h-[120px] sm:max-h-[350px] rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                     referrerPolicy="no-referrer"
                     loading="lazy"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-blue-50 px-2.5 py-1 rounded-full">
                     INFRAESTRUCTURA DE PRIMER NIVEL
                   </span>
@@ -1824,7 +1824,7 @@ export default function App() {
       </section>
 
       {/* 📚 9. BLOG PREPARED FOR SEO */}
-      <section id="blog" className="py-20 bg-white">
+      <section id="blog" className="py-20 bg-gradient-to-b from-[#F2F7FB] via-white to-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -2239,7 +2239,7 @@ export default function App() {
       </section>
 
       {/* 🗺️ CLINIC DETAILED MAP & DURATION SCHEDULE BLOCK */}
-      <section className="py-20 bg-white" id="contacto">
+      <section className="py-20 bg-gradient-to-b from-white via-blue-50/10 to-[#F8FAFC]" id="contacto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
