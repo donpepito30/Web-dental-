@@ -79,14 +79,14 @@ export default function ClinicGallery() {
     <section id="instalaciones" className="py-20 bg-gradient-to-b from-white to-[#F5F7FA] relative overflow-hidden">
       {/* Decorative background visual elements */}
       <div className="absolute top-[30%] right-[-10%] w-72 h-72 bg-blue-400/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-80 h-80 bg-[#21C58E]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[-10%] w-80 h-80 bg-[#00A9FF]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Section Title & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-bold text-[#0B5ED7] uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-[#21C58E] animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 text-[#00A9FF] animate-pulse" />
             <span>Galería Clínica Especializada</span>
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-4xl text-[#263238]">
@@ -157,7 +157,7 @@ export default function ClinicGallery() {
                 </div>
 
                 <div id="video-benefit-2" className="flex gap-3 items-start group/b hover:translate-x-1 transition-transform duration-200">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-[#00A9FF] flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover/b:bg-[#00A9FF] group-hover/b:text-white transition-all duration-200">
+                  <div className="w-8 h-8 rounded-lg bg-sky-50 text-[#00A9FF] flex items-center justify-center shrink-0 mt-0.5 shadow-sm group-hover/b:bg-[#00A9FF] group-hover/b:text-white transition-all duration-200">
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export default function ClinicGallery() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 border-t md:border-t-0 md:border-x border-gray-100 pt-6 md:pt-0 md:px-6">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-[#21C58E] shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center text-[#00A9FF] shrink-0">
               <Stethoscope className="w-6 h-6" />
             </div>
             <div>
@@ -274,7 +274,7 @@ export default function ClinicGallery() {
               />
               
               {/* Category indicator inside */}
-              <span className="absolute top-4 left-4 bg-gradient-to-r from-[#0B5ED7] to-[#21C58E] px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest select-none shadow">
+              <span className="absolute top-4 left-4 bg-gradient-to-r from-[#0B5ED7] to-[#00A9FF] px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest select-none shadow">
                 {GALLERY_IMAGES[activeImageIndex].category}
               </span>
             </div>

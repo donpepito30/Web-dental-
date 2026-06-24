@@ -55,7 +55,7 @@ import { AnimatedNumber } from "./components/AnimatedNumber";
 const getServiceIcon = (iconName: string) => {
   switch (iconName) {
     case "Medicina":
-      return <Stethoscope className="w-6 h-6 text-[#21C58E]" />;
+      return <Stethoscope className="w-6 h-6 text-[#00A9FF]" />;
     case "Ecografia":
       return <Activity className="w-6 h-6 text-[#0B5ED7]" />;
     case "Examenes":
@@ -74,11 +74,11 @@ const getBenefitIcon = (iconName: string) => {
     case "ShieldCheck":
       return <ShieldCheck className="w-8 h-8 text-[#0B5ED7]" />;
     case "Cpu":
-      return <Cpu className="w-8 h-8 text-[#21C58E]" />;
+      return <Cpu className="w-8 h-8 text-[#00A9FF]" />;
     case "UserCheck":
       return <UserCheck className="w-8 h-8 text-[#0B5ED7]" />;
     case "MapPin":
-      return <MapPin className="w-8 h-8 text-[#21C58E]" />;
+      return <MapPin className="w-8 h-8 text-[#00A9FF]" />;
     default:
       return <ShieldCheck className="w-8 h-8 text-[#0B5ED7]" />;
   }
@@ -478,7 +478,7 @@ export default function App() {
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-xs font-bold text-[#21C58E] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00A9FF]/10 border border-[#00A9FF]/20 rounded-full text-xs font-bold text-[#00A9FF] uppercase tracking-wider">
               <span>Especialidades Médicas</span>
             </div>
             <h2 className="font-heading font-black text-3xl sm:text-4xl text-[#263238] leading-tight">
@@ -493,7 +493,7 @@ export default function App() {
               <AnimatedText 
                 text="Haz clic en cada especialidad médica para desplegar nuestro catálogo completo de tratamientos y servicios especializados de primer nivel."
                 highlightWords={["catálogo", "especializados"]}
-                highlightClass="text-[#21C58E] font-medium"
+                highlightClass="text-[#00A9FF] font-medium"
                 delay={0.25}
               />
             </p>
@@ -513,7 +513,7 @@ export default function App() {
                 aria-controls="panel-odontologia-content"
               >
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#21C58E] flex items-center justify-center shrink-0 shadow-sm transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-[#00A9FF]/10 text-[#00A9FF] flex items-center justify-center shrink-0 shadow-sm transition-transform">
                     <Stethoscope className="w-8 h-8" />
                   </div>
                   <div className="space-y-1 text-center sm:text-left">
@@ -521,7 +521,7 @@ export default function App() {
                       <h3 className="font-heading font-black text-xl sm:text-2xl text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
                         Servicios de Odontología
                       </h3>
-                      <span className="text-[10px] uppercase tracking-widest font-extrabold px-2.5 py-1 bg-emerald-50 text-[#21C58E] border border-emerald-100 rounded-full mt-1 sm:mt-0">
+                      <span className="text-[10px] uppercase tracking-widest font-extrabold px-2.5 py-1 bg-[#00A9FF]/10 text-[#00A9FF] border border-[#00A9FF]/20 rounded-full mt-1 sm:mt-0">
                         1 Tratamiento
                       </span>
                     </div>
@@ -567,7 +567,7 @@ export default function App() {
                               <div className="p-3 rounded-xl bg-slate-50 group-hover:bg-blue-50 transition-colors">
                                 {getServiceIcon(service.iconName)}
                               </div>
-                              <span className="text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 bg-emerald-50 text-[#21C58E] border border-emerald-100 rounded-full">
+                              <span className="text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 bg-[#00A9FF]/10 text-[#00A9FF] border border-[#00A9FF]/20 rounded-full">
                                 Odontología
                               </span>
                             </div>
@@ -750,7 +750,7 @@ export default function App() {
                             />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#21C58E] bg-emerald-50 px-2 py-0.5 rounded">
+                            <span className="inline-block text-[9px] font-extrabold uppercase tracking-widest text-[#00A9FF] bg-[#00A9FF]/10 px-2 py-0.5 rounded">
                               TECNOLOGÍA DE ECOGRAFÍA
                             </span>
                             <h4 className="font-heading font-black text-xs text-[#263238] mt-1 leading-snug">
@@ -803,7 +803,7 @@ export default function App() {
                 
                 {/* Specialized Header Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-semibold text-[#0B5ED7]">
-                  <Stethoscope className="w-4 h-4 text-[#21C58E]" />
+                  <Stethoscope className="w-4 h-4 text-[#00A9FF]" />
                   <span className="capitalize">{selectedDetailedService.specialty} Especializada</span>
                 </div>
 
@@ -817,8 +817,8 @@ export default function App() {
                   <p>{selectedDetailedService.longerDetails}</p>
 
                   {selectedDetailedService.prepInfo && (
-                    <div className="bg-emerald-50 border border-emerald-100 p-4 rounded-xl flex gap-3">
-                      <AlertCircle className="w-5 h-5 text-[#21C58E] shrink-0" />
+                    <div className="bg-[#00A9FF]/10 border border-[#00A9FF]/20 p-4 rounded-xl flex gap-3">
+                      <AlertCircle className="w-5 h-5 text-[#00A9FF] shrink-0" />
                       <div>
                         <p className="font-bold text-gray-800 text-xs uppercase tracking-wider">Preparación requerida:</p>
                         <p className="text-xs text-gray-600 mt-1">{selectedDetailedService.prepInfo}</p>
@@ -838,7 +838,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase font-semibold">Costo de Inversión</p>
-                    <p className="text-sm font-bold text-[#21C58E] mt-1">
+                    <p className="text-sm font-bold text-[#00A9FF] mt-1">
                       {selectedDetailedService.priceEstimate}
                     </p>
                   </div>
@@ -862,7 +862,7 @@ export default function App() {
                     href={`https://wa.me/593968609865?text=Hola,%20quisiera%20saber%20más%20sobre%20${encodeURIComponent(selectedDetailedService.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-3.5 bg-emerald-50 hover:bg-emerald-100 text-[#21C58E] rounded-xl flex items-center justify-center transition-colors"
+                    className="px-4 py-3.5 bg-[#00A9FF]/10 hover:bg-[#00A9FF]/20 text-[#00A9FF] rounded-xl flex items-center justify-center transition-colors"
                     title="Preguntar detalles por WhatsApp"
                   >
                     <Phone className="w-5 h-5" />
@@ -933,8 +933,8 @@ export default function App() {
           {/* ACESS Badge & 4 Compact Benefits in a SINGLE row */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center pt-8 border-t border-gray-100">
             {/* ACESS Badge */}
-            <div className="lg:col-span-4 bg-white p-4 rounded-2xl border border-emerald-100/80 flex items-center gap-4 shadow-sm">
-              <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-[#21C58E] shrink-0">
+            <div className="lg:col-span-4 bg-white p-4 rounded-2xl border border-[#00A9FF]/20 flex items-center gap-4 shadow-sm">
+              <div className="w-10 h-10 bg-[#00A9FF]/10 rounded-full flex items-center justify-center text-[#00A9FF] shrink-0">
                 <Award className="w-5 h-5" />
               </div>
               <div>
@@ -987,7 +987,7 @@ export default function App() {
               <AnimatedText 
                 text="Haz clic en cada área médica para desplegar los paquetes promocionales exclusivos y facilidades de financiamiento vigentes."
                 highlightWords={["exclusivos", "financiamiento"]}
-                highlightClass="text-[#21C58E] font-medium"
+                highlightClass="text-[#00A9FF] font-medium"
                 delay={0.25}
               />
             </p>
@@ -1007,7 +1007,7 @@ export default function App() {
                 aria-controls="panel-promo-odontologia-content"
               >
                 <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-[#21C58E] flex items-center justify-center shrink-0 shadow-sm transition-transform">
+                  <div className="w-16 h-16 rounded-2xl bg-[#00A9FF]/10 text-[#00A9FF] flex items-center justify-center shrink-0 shadow-sm transition-transform">
                     <Sparkles className="w-8 h-8" />
                   </div>
                   <div className="space-y-1 text-center sm:text-left">
@@ -1015,7 +1015,7 @@ export default function App() {
                       <h3 className="font-heading font-black text-xl sm:text-2xl text-[#263238] group-hover:text-[#0B5ED7] transition-colors">
                         Promociones en Odontología
                       </h3>
-                      <span className="text-[10px] uppercase tracking-widest font-extrabold px-2.5 py-1 bg-emerald-50 text-[#21C58E] border border-emerald-100 rounded-full mt-1 sm:mt-0">
+                      <span className="text-[10px] uppercase tracking-widest font-extrabold px-2.5 py-1 bg-[#00A9FF]/10 text-[#00A9FF] border border-[#00A9FF]/20 rounded-full mt-1 sm:mt-0">
                         2 Ofertas Activas
                       </span>
                     </div>
@@ -1048,15 +1048,15 @@ export default function App() {
                   {PROMOS_DATA.filter((p) => p.specialty === "odontologia").map((promo) => (
                     <div
                       key={promo.id}
-                      className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#21C58E]/40 transition-all duration-300 relative overflow-hidden flex flex-col justify-between"
+                      className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#00A9FF]/40 transition-all duration-300 relative overflow-hidden flex flex-col justify-between"
                     >
                       {/* Decorative background light circle */}
-                      <div className="absolute top-0 right-0 w-24 h-24 bg-[#21C58E]/5 rounded-bl-full pointer-events-none" />
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-[#00A9FF]/5 rounded-bl-full pointer-events-none" />
 
                       {/* Card Top Information */}
                       <div className="p-6 sm:p-8 space-y-4">
                         <div className="flex items-center justify-between">
-                          <span className="bg-[#21C58E]/10 text-[#21C58E] font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full border border-[#21C58E]/20">
+                          <span className="bg-[#00A9FF]/10 text-[#00A9FF] font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full border border-[#00A9FF]/20">
                             {promo.badge}
                           </span>
                           <span className="text-xs text-pink-600 font-bold bg-pink-50 px-2 py-0.5 rounded-lg border border-pink-100">
@@ -1238,7 +1238,7 @@ export default function App() {
 
       {/* 💬 6. TESTIMONIALS CAROUSEL SECTION */}
       <section className="py-20 bg-[#F5F7FA] relative overflow-hidden" id="testimonios">
-        <div className="absolute top-[20%] left-[-5%] w-60 h-60 bg-emerald-300/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-[20%] left-[-5%] w-60 h-60 bg-[#00A9FF]/5 rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -1255,7 +1255,7 @@ export default function App() {
               <AnimatedText 
                 text="Cientos de testimonios reales respaldan la calidez de nuestro servicio clínico de asistencia."
                 highlightWords={["testimonios", "calidez"]}
-                highlightClass="text-[#21C58E] font-medium"
+                highlightClass="text-[#00A9FF] font-medium"
                 delay={0.25}
               />
             </p>
@@ -1280,7 +1280,7 @@ export default function App() {
 
               {/* Patient bio card */}
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 bg-gradient-to-tr from-[#0B5ED7] to-[#21C58E] rounded-full flex items-center justify-center font-bold text-white text-base shadow-inner">
+                <div className="w-12 h-12 bg-gradient-to-tr from-[#0B5ED7] to-[#00A9FF] rounded-full flex items-center justify-center font-bold text-white text-base shadow-inner">
                   {TESTIMONIALS_DATA[testimonialIndex].name.charAt(0)}
                 </div>
                 <div className="text-center">
@@ -1290,7 +1290,7 @@ export default function App() {
                   <p className="text-xs text-gray-400">{TESTIMONIALS_DATA[testimonialIndex].city}</p>
                 </div>
 
-                <span className="mt-2 text-[10px] font-bold text-[#21C58E] bg-[#21C58E]/10 px-3 py-1 rounded-full uppercase tracking-widest border border-[#21C58E]/20">
+                <span className="mt-2 text-[10px] font-bold text-[#00A9FF] bg-[#00A9FF]/10 px-3 py-1 rounded-full uppercase tracking-widest border border-[#00A9FF]/20">
                   {TESTIMONIALS_DATA[testimonialIndex].treatment}
                 </span>
               </div>
@@ -1355,7 +1355,7 @@ export default function App() {
               <AnimatedText 
                 text="Despeja tus dudas clínicas. Filtra de forma inmediata escribiendo tu duda abajo."
                 highlightWords={["clínicas", "Filtra"]}
-                highlightClass="text-[#21C58E] font-medium"
+                highlightClass="text-[#00A9FF] font-medium"
                 delay={0.25}
               />
             </p>
@@ -1428,7 +1428,7 @@ export default function App() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3 text-sm">
-                  <MapPin className="w-5 h-5 text-[#21C58E] shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#00A9FF] shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold">Dirección Exacta:</p>
                     <p className="text-gray-500">Av. Abel Gilbert 231 y calle Sibambe, Durán, Guayas, Ecuador. Código Postal 092408.</p>
@@ -1447,17 +1447,17 @@ export default function App() {
                 </div>
 
                 <div className="flex items-start gap-3 text-sm">
-                  <Phone className="w-5 h-5 text-[#21C58E] shrink-0 mt-0.5" />
+                  <Phone className="w-5 h-5 text-[#00A9FF] shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold">Teléfono & WhatsApp:</p>
                     <p className="text-[#0B5ED7] font-bold">Tel: +593 96 937 0655</p>
-                    <p className="text-[#21C58E] font-bold">WhatsApp: +593 96 860 9865</p>
+                    <p className="text-[#00A9FF] font-bold">WhatsApp: +593 96 860 9865</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-gray-100 flex items-center gap-3">
-                <div className="bg-emerald-50 text-[#21C58E] p-2 rounded-lg text-xs font-bold">ATENCIÓN AMBULATORIA</div>
+                <div className="bg-[#00A9FF]/10 text-[#00A9FF] p-2 rounded-lg text-xs font-bold">ATENCIÓN AMBULATORIA</div>
                 <div className="bg-blue-50 text-[#0B5ED7] p-2 rounded-lg text-xs font-bold font-sans">ECUADOR PREVENTIVO</div>
               </div>
             </div>
@@ -1472,7 +1472,7 @@ export default function App() {
                 <line x1="0" y1="250" x2="600" y2="250" stroke="#FFF" strokeWidth="8" />
                 <line x1="200" y1="0" x2="200" y2="400" stroke="#FFF" strokeWidth="8" />
                 <line x1="450" y1="0" x2="450" y2="400" stroke="#FFF" strokeWidth="6" />
-                <rect x="250" y="50" width="120" height="80" rx="10" fill="#21C58E" opacity="0.3" />
+                <rect x="250" y="50" width="120" height="80" rx="10" fill="#00A9FF" opacity="0.3" />
                 <rect x="50" y="150" width="110" height="90" rx="10" fill="#0B5ED7" opacity="0.2" />
               </svg>
 
@@ -1659,7 +1659,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => handleBotChipClick("¿Cuál es la dirección y teléfono?")}
-                className="bg-[#F5F7FA] hover:bg-[#21C58E]/10 text-[10px] font-bold text-gray-600 hover:text-[#21C58E] px-3 py-1.5 rounded-full transition-colors cursor-pointer shrink-0"
+                className="bg-[#F5F7FA] hover:bg-[#00A9FF]/10 text-[10px] font-bold text-gray-600 hover:text-[#00A9FF] px-3 py-1.5 rounded-full transition-colors cursor-pointer shrink-0"
               >
                 📍 Ubicación exactas
               </button>
@@ -1715,7 +1715,7 @@ export default function App() {
       <footer id="grounded-footer" className="relative bg-[#0B121F] border-t border-slate-800/80 text-slate-200 pt-10 pb-6 overflow-hidden">
         {/* Subtle background decorative shapes */}
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-blue-400/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
@@ -1785,7 +1785,7 @@ export default function App() {
                     href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20solicitar%20asistencia%20en%20línea." 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-7 h-7 rounded-md bg-slate-800/80 hover:bg-[#21C58E] hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm text-gray-400"
+                    className="w-7 h-7 rounded-md bg-slate-800/80 hover:bg-[#00A9FF] hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-sm text-gray-400"
                     title="Asistencia Virtual"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
@@ -1796,7 +1796,7 @@ export default function App() {
 
             {/* Column 2: Geolocalized Coordinates & Direct Hub (5 cols) */}
             <div className="lg:col-span-5 space-y-4">
-              <h4 className="font-heading font-extrabold text-[11px] uppercase tracking-wider text-slate-400 border-l border-[#21C58E] pl-2">
+              <h4 className="font-heading font-extrabold text-[11px] uppercase tracking-wider text-slate-400 border-l border-[#00A9FF] pl-2">
                 Datos de Contacto
               </h4>
               
@@ -1822,7 +1822,7 @@ export default function App() {
                 {/* Dial action lines with badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div className="flex items-center justify-between bg-slate-800/10 hover:bg-slate-800/20 px-3 py-2 rounded-xl border border-slate-800/40 transition-colors">
-                    <a href="tel:+593968609865" className="flex items-center gap-1.5 text-[#21C58E] hover:underline font-bold text-[11px]">
+                    <a href="tel:+593968609865" className="flex items-center gap-1.5 text-[#00A9FF] hover:underline font-bold text-[11px]">
                       <Phone className="w-3 h-3" />
                       <span>+593 96 860 9865</span>
                     </a>
@@ -1855,7 +1855,7 @@ export default function App() {
           {/* Pre-Copyright Sub-Grid & Dynamic Back to Top Trigger */}
           <div className="pt-4 pb-3 flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-slate-800/20">
             <div className="flex items-center gap-1.5 text-xs text-gray-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00A9FF] animate-pulse" />
               <span className="text-[11px]">Servicio en línea 100% verificado y conectado</span>
             </div>
             
