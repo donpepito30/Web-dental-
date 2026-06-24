@@ -378,18 +378,28 @@ export default function App() {
       {/* 🚀 1. HERO SECTION */}
       <section
         id="hero"
-        className="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-[85vh] flex items-center bg-transparent overflow-hidden"
+        className="relative pt-36 pb-24 md:pt-48 md:pb-36 min-h-[90vh] flex items-center bg-[#10172A] overflow-hidden"
       >
         {/* Real Clinic Background Image with high visibility & premium healthcare gradient mask overlay */}
-        <div className="absolute top-[84px] md:top-[92px] inset-x-0 bottom-0 z-0">
-          <img 
+        <div className="absolute inset-x-0 bottom-0 top-[76px] md:top-[92px] z-0 overflow-hidden bg-[#10172A]">
+          <motion.img 
             src="https://i.ibb.co/Jj2DQsjF/13-clinica-me-dica.jpg" 
             alt="Fondo de Centro Médico Inmedentec" 
             referrerPolicy="no-referrer"
+            initial={{ scale: 1.15, opacity: 0.8 }}
+            animate={{ scale: 1.05, opacity: 1 }}
+            transition={{ duration: 3, ease: "easeOut" }}
             className="w-full h-full object-cover select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1E2A5E]/95 via-[#1E2A5E]/80 to-transparent" />
-          <div className="absolute inset-0 bg-[#1E2A5E]/20" />
+          {/* Deep dark multi-layered gradients that blend perfectly with the transparent glass header */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1E2A5E]/85 to-[#1E2A5E]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1E2A5E]/95 via-transparent to-transparent opacity-70" />
+          
+          {/* Vignette & Soft Peripheral Mask to direct attention to center typography */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(16,23,42,0.45)_100%)] pointer-events-none" />
+          
+          {/* Bottom smooth fade to avoid any harsh cut with Services section */}
+          <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-white via-white/20 to-transparent pointer-events-none" />
         </div>
 
         {/* Floating background decorative light blobs */}

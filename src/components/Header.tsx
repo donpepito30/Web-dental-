@@ -28,10 +28,10 @@ export default function Header() {
   return (
     <header
       id="main-header"
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/85 backdrop-blur-md shadow-sm border-b border-gray-100 py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/85 backdrop-blur-xl shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06)] border-b border-slate-200/10 py-3"
+          : "bg-white/5 backdrop-blur-md border-b border-white/5 py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +39,7 @@ export default function Header() {
           
           {/* Logo Brand */}
           <a href="#" className="flex items-center gap-3 group" id="brand-logo">
-            <div className="relative flex items-center justify-center w-11 h-11 rounded-xl overflow-hidden border border-gray-100 bg-white shadow-sm group-hover:scale-105 transition-transform duration-200">
+            <div className="relative flex items-center justify-center w-11 h-11 rounded-xl overflow-hidden border border-white/15 bg-white shadow-sm group-hover:scale-105 transition-transform duration-300">
               <img 
                 src="https://i.ibb.co/wN2zzSsw/FB-IMG-1781954245363.jpg" 
                 alt="Logo Inmedentec Centro Médico" 
@@ -48,10 +48,14 @@ export default function Header() {
               />
             </div>
             <div>
-              <span className="font-heading font-black text-xl tracking-tight text-[#1E2A5E] group-hover:text-[#00A9FF] transition-colors flex items-center gap-1">
+              <span className={`font-heading font-black text-xl tracking-tight transition-colors flex items-center gap-1 ${
+                isScrolled ? "text-[#1E2A5E]" : "text-white"
+              } group-hover:text-[#00A9FF]`}>
                 Inmedentec
               </span>
-              <p className="text-[9px] text-[#00A9FF] uppercase tracking-widest font-black">Clínica Médica & Dental</p>
+              <p className={`text-[9px] uppercase tracking-widest font-black transition-colors ${
+                isScrolled ? "text-[#00A9FF]" : "text-[#7DDAE8]"
+              }`}>Clínica Médica & Dental</p>
             </div>
           </a>
 
@@ -61,7 +65,11 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="font-sans font-semibold text-sm text-[#1E2A5E]/80 hover:text-[#00A9FF] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#00A9FF] hover:after:w-full after:transition-all after:duration-200"
+                className={`font-sans font-semibold text-sm transition-all duration-300 relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#00A9FF] hover:after:w-full after:transition-all after:duration-200 ${
+                  isScrolled
+                    ? "text-[#1E2A5E]/85 hover:text-[#00A9FF]"
+                    : "text-white/90 hover:text-[#7DDAE8]"
+                }`}
               >
                 {item.label}
               </a>
@@ -74,9 +82,13 @@ export default function Header() {
               href="https://wa.me/593968609865?text=Hola,%20quisiera%20consultar%20sobre%20sus%20servicios%20médicos."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-bold text-[#1E2A5E] hover:text-[#00A9FF] transition-colors bg-white hover:bg-slate-50 border border-slate-200/80 px-4 py-2.5 rounded-full shadow-sm"
+              className={`flex items-center gap-2 text-xs font-bold transition-all duration-300 border px-4 py-2.5 rounded-full shadow-sm hover:scale-[1.02] active:scale-95 ${
+                isScrolled
+                  ? "text-[#1E2A5E] hover:text-[#00A9FF] bg-white hover:bg-slate-50 border-slate-200/80"
+                  : "text-white hover:text-[#7DDAE8] bg-white/10 hover:bg-white/15 border-white/10"
+              }`}
             >
-              <Phone className="w-3.5 h-3.5 text-[#00A9FF]" />
+              <Phone className={`w-3.5 h-3.5 ${isScrolled ? "text-[#00A9FF]" : "text-[#7DDAE8]"}`} />
               <span>096 860 9865</span>
             </a>
             
@@ -84,7 +96,11 @@ export default function Header() {
               href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20médica."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-bold text-white bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 hover:shadow-lg hover:shadow-indigo-900/10 active:scale-95 transition-all px-6 py-2.5 rounded-full shadow-md"
+              className={`flex items-center gap-2 text-xs font-bold text-white transition-all duration-300 px-6 py-2.5 rounded-full shadow-md hover:scale-105 active:scale-95 ${
+                isScrolled
+                  ? "bg-[#1E2A5E] hover:bg-[#1E2A5E]/90 hover:shadow-lg hover:shadow-indigo-950/10"
+                  : "bg-[#00A9FF] hover:bg-[#00A9FF]/90 hover:shadow-lg hover:shadow-blue-500/10"
+              }`}
             >
               <Calendar className="w-3.5 h-3.5 text-[#7DDAE8]" />
               <span>Reservar cita</span>
@@ -97,14 +113,20 @@ export default function Header() {
               href="https://wa.me/593968609865?text=Hola%20Inmedentec!%20Quisiera%20reservar%20una%20cita%20médica."
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#1E2A5E] text-white rounded-full hover:bg-opacity-95"
+              className={`p-2 text-white rounded-full transition-transform duration-200 active:scale-90 ${
+                isScrolled ? "bg-[#1E2A5E]" : "bg-[#00A9FF]"
+              }`}
               title="Reservar Cita"
             >
               <Calendar className="w-4 h-4 text-[#7DDAE8]" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#1E2A5E] hover:text-[#00A9FF] bg-gray-100 rounded-lg transition-colors"
+              className={`p-2 rounded-lg transition-colors ${
+                isScrolled
+                  ? "text-[#1E2A5E] hover:text-[#00A9FF] bg-gray-100"
+                  : "text-white hover:text-[#7DDAE8] bg-white/10 hover:bg-white/15"
+              }`}
               aria-label="Toggle Menu"
               id="mobile-menu-btn"
             >
