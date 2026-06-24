@@ -381,7 +381,7 @@ export default function App() {
         className="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-[85vh] flex items-center bg-transparent overflow-hidden"
       >
         {/* Real Clinic Background Image with high visibility & premium healthcare gradient mask overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute top-[84px] md:top-[92px] inset-x-0 bottom-0 z-0">
           <img 
             src="https://i.ibb.co/Jj2DQsjF/13-clinica-me-dica.jpg" 
             alt="Fondo de Centro Médico Inmedentec" 
